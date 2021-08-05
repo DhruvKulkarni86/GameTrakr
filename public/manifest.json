@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "GameTrakr.",
+  "name": "GameTrakr: Your personal game price tracker",
   "icons": [
     {
       "src": "favicon.ico",
