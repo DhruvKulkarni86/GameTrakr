@@ -119,7 +119,8 @@ router.post('/login', async (req, res) => {
             return res.status(200).json({
                 loginStatus: true,
                 accessToken: accessToken,
-                fname: user.fname
+                fname: user.fname,
+                wishlist: user.wishlist
             })
         }
         else{
