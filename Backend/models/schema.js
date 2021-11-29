@@ -7,7 +7,7 @@ const userSchema = new Schema(
         lname: String,
         password: String,
         email: String,
-        wishlist: [{slug: String, gameID: Number, steamID: Number}]
+        wishlist: [{slug: String, gameID: Number, steamID: String}]
     }
 ,{collection : 'UserInformation'});
 

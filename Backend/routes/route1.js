@@ -72,6 +72,7 @@ router.post('/signup', async (req, res) => {
         const lname = req.body.lname;
         const email = req.body.email;
         const password = req.body.password;
+        console.log(fname)
         const salt = await bcrypt.genSalt();
         var user = await User.find({ email: email});
         if(user.length!==0){
@@ -98,6 +99,7 @@ router.post('/signup', async (req, res) => {
         });    
     }
     catch(err){
+        console.log(err)
         res.status(400).json({
             signupStatus: "false"
         });
@@ -171,7 +173,7 @@ router.put('/wishlist',authenticateToken, async (req, res) => {
         user = user[0];
         if(req.user.password === user.password){
             var wishlist = user.wishlist;
-            wishlist.push({slug: req.body.slug, gameID: parseInt(req.body.gameID), steamID: parseInt(req.body.steamID)});
+            wishlist.push({slug: req.body.WL.slug, gameID: parseInt(req.body.WL.gameID), steamID: req.body.WL.steamID});
             await user.save();
             return res.status(200).json({
             message: "Wishlist Updated Successfully"
