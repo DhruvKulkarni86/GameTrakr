@@ -190,4 +190,34 @@ router.put('/wishlist',authenticateToken, async (req, res) => {
     }
 })
 
+
+router.delete('/wishlist',authenticateToken, async (req, res) => {
+    try{
+        var email = req.user.email;
+        var user = await User.find({ email: email});
+        user = user[0];
+        if(req.user.password === user.password){
+            var wishlist = user.wishlist;
+            for(i = 0; i < wishlist.length; i++){
+                let entry = wishlist[i];
+                if(entry.gameID === parseInt(req.body.gameID)){
+                    wishlist.splice(i, 1);
+                }
+            }
+            await user.save();
+            return res.status(200).json({
+            message: "Item Removed From Wishlist"
+        })
+        }
+        else{
+            return res.send('Invalid Token');
+        }
+    }
+    catch(err){
+        return res.status(400).json({
+            message: err.message
+        })
+    }
+})
+
 module.exports = router;
