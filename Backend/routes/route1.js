@@ -117,7 +117,7 @@ router.post('/login', async (req, res) => {
         }
         user = user[0];
         if(await bcrypt.compare(pass, user.password)){
-            const accessToken = jwt.sign(user.toJSON(), process.env.ACCESS_TOKEN_SECRET, { expiresIn: '10m' })
+            const accessToken = jwt.sign(user.toJSON(), process.env.ACCESS_TOKEN_SECRET, { expiresIn: '60m' })
             return res.status(200).json({
                 loginStatus: true,
                 accessToken: accessToken,
@@ -200,13 +200,14 @@ router.delete('/wishlist',authenticateToken, async (req, res) => {
             var wishlist = user.wishlist;
             for(i = 0; i < wishlist.length; i++){
                 let entry = wishlist[i];
-                if(entry.gameID === parseInt(req.body.gameID)){
+                if(entry.gameID === parseInt(req.body.WL.gameID)){
                     wishlist.splice(i, 1);
                 }
             }
             await user.save();
             return res.status(200).json({
-            message: "Item Removed From Wishlist"
+            message: "Item Removed From Wishlist",
+            wishlist: user.wishlist
         })
         }
         else{
