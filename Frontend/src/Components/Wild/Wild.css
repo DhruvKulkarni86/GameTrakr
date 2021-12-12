@@ -1,0 +1,72 @@
+.wild-wrap {
+	font-family: "Press Start 2P", cursive;
+	background-color: #181b20;
+	color: white;
+	min-height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 4rem;
+	padding: 0;
+}
+
+.wild-opt {
+	cursor: pointer;
+	transition: 0.2s;
+	font-size: 1.4rem;
+	color: white;
+}
+.wild-opt:hover {
+	color: rgb(184, 15, 15);
+	transform: scale(1.5);
+	border-bottom: 4px solid rgb(184, 15, 15);
+}
+
+.wild-head {
+	font-size: 2rem;
+}
+
+.wild-4 {
+	font-size: 2.5rem;
+	color: rgb(184, 15, 15);
+}
+
+.wild-lnk {
+	text-decoration: none;
+	color: black;
+}
+
+@media (max-width: 960px) {
+	.wild-head {
+		font-size: 1.5rem;
+	}
+}
+
+@media (max-width: 720px) {
+	.wild-head {
+		font-size: 1rem;
+	}
+	.wild-opt {
+		font-size: 0.8rem;
+	}
+}
+
+@media (max-width: 464px) {
+	.wild-head {
+		font-size: 0.5rem;
+	}
+	.wild-opt {
+		font-size: 0.6rem;
+	}
+}
+
+@media (max-width: 232px) {
+	.wild-head {
+		font-size: 0.4rem;
+	}
+	.wild-opt {
+		font-size: 0.6rem;
+	}
+}

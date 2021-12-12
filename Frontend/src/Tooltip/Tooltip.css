@@ -1,0 +1,28 @@
+.tooltip-container {
+	position: relative;
+}
+
+.tooltip-box {
+	position: absolute;
+	background: rgb(0, 0, 0);
+	color: #fff;
+	padding: 5px;
+	border-radius: 5px;
+	top: calc(100% + 5px);
+	display: none;
+}
+
+.tooltip-box.visible {
+	display: block;
+	font-family: "Poppins", sans-serif;
+	font-size: 0.8rem;
+}
+
+.tooltip-arrow {
+	position: absolute;
+	top: -10px;
+	left: 10%;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent transparent rgba(0, 0, 0, 0.7) transparent;
+}

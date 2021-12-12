@@ -1,0 +1,22 @@
+.Search-Wrap {
+	padding-top: 35px;
+	font-family: "Poppins", sans-serif;
+}
+
+.search {
+	min-height: 100vh;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	/*! Gradient Background*/
+	background: rgb(105, 5, 5);
+	background: linear-gradient(
+		192deg,
+		rgba(105, 5, 5, 1) 0%,
+		rgba(61, 11, 42, 1) 64%,
+		rgb(10, 4, 51) 95%
+	);
+	/* background-color: #181b21; */
+}

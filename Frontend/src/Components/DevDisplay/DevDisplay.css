@@ -1,0 +1,55 @@
+.dd-wrap {
+	font-family: "Poppins", sans-serif;
+	min-height: 100vh;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	background: rgb(105, 5, 5);
+	background: linear-gradient(
+		192deg,
+		rgba(105, 5, 5, 1) 0%,
+		rgba(61, 11, 42, 1) 64%,
+		rgb(10, 4, 51) 95%
+	);
+	min-width: 100%;
+	color: white;
+}
+
+.dd-head {
+	margin: 2.8em;
+	height: 15rem;
+	/* background-image: url("https://media.rawg.io/media/games/22c/22ce391b3096cd46eadae1a890624f39.jpg"); */
+	background-image: url("../../assets/dev.jpg");
+	width: 100%;
+	height: 400px;
+	background-repeat: no-repeat;
+	background-position: 50% 45%;
+}
+.dd-title {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 400px;
+	backdrop-filter: brightness(30%);
+	backdrop-filter: blur(90%);
+	width: 100%;
+}
+.dd-title p {
+	font-size: 0.8rem;
+}
+.dd-head h1 {
+	margin: 0 auto;
+}
+.dev-search-res {
+	display: grid;
+	min-height: auto;
+	justify-content: center;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, 0.1fr);
+	grid-column-gap: 3.59em;
+	grid-row-gap: 3.5em;
+	margin-bottom: 15px;
+}

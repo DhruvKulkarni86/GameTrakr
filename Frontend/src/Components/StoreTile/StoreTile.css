@@ -1,0 +1,28 @@
+.st-wrap {
+	padding: 1rem;
+	display: flex;
+	font-family: "Roboto Condensed", sans-serif;
+	gap: 1rem;
+	background: rgba(255, 255, 255, 0.4);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.st-wrap img {
+	transition: 0.3s;
+}
+.st-wrap img:hover {
+	transform: translateY(-10px);
+}
+.stm {
+	max-width: 100%;
+	height: 48px;
+	width: 48px;
+	align-self: center;
+}
+.st-wrap p {
+	font-size: 1.3rem;
+	font-weight: 200;
+}
