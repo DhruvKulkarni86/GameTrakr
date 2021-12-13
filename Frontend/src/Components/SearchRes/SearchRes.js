@@ -53,6 +53,7 @@ const SearchRes = ({title, rating, genre, imglnk, gameid, slug, plat}) => {
     // console.log("Image Link", imglnk);
     let urlArr = imglnk.split('/');
     let newURL = `https://media.rawg.io/media/crop/600/400/${urlArr[4]}/${urlArr[5]}/${urlArr[6]}`;
+    // console.log("URL ARR", urlArr);
 //!
 
 //!hover state of card

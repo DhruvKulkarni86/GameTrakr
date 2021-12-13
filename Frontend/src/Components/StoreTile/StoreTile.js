@@ -65,8 +65,7 @@ const StoreTile = ({stores, year, deals}) => {
                             <a href={stm[0].url} target="_blank" rel="noopener noreferrer">
                             <img src="https://cdn.worldvectorlogo.com/logos/steam-icon-logo.svg" alt="steam" className="stm"/>
                             </a>
-                            {csStm.length!==0?csStm[0].isOnSale==="0"?<p className='tile-text'>${csStm[0].salePrice}</p>:<p className='tile-text'>Sale Price:<br/>${csStm[0].salePrice}</p>:null}
-                            
+                            {csStm.length!==0?csStm[0].isOnSale==="0"?<p className='tile-text'>${csStm[0].salePrice}</p>:<p><span className='st-strike'>{csStm[0].normalPrice}</span><br/>${csStm[0].salePrice}</p>:null}
                         </h2>
                     </Tooltip>
                     :null}
@@ -74,9 +73,9 @@ const StoreTile = ({stores, year, deals}) => {
                     <Tooltip text="GoG Store">
                     <h2>
                         <a href={gog[0].url} target="_blank" rel="noopener noreferrer">
-                        <img src="https://img.icons8.com/fluency/48/000000/gog-galaxy.png" alt="gog" className="gog"/>
+                        <img src="https://img.icons8.com/fluency/48/000000/gog-galaxy.png" alt="gog" className="stm"/>
                         </a>
-                        {csGog.length!==0?csGog[0].isOnSale==="0"?<p>${csGog[0].salePrice}</p>:<p>Sale Price:<br/>${csGog[0].salePrice}</p>:null}
+                        {csGog.length!==0?csGog[0].isOnSale==="0"?<p>${csGog[0].salePrice}</p>:<p><span className='st-strike'>{csGog[0].normalPrice}</span><br/>${csGog[0].salePrice}</p>:null}
                     </h2>
                     </Tooltip>
                     :null}
@@ -87,7 +86,7 @@ const StoreTile = ({stores, year, deals}) => {
                         <img src="https://cdn.worldvectorlogo.com/logos/epic-games-2.svg
                         " alt="epic" className="stm"/>
                         </a>
-                        {csEpic.length!==0?csEpic[0].isOnSale==="0"?<p>${csEpic[0].salePrice}</p>:<p>Sale Price:<br/>${csEpic[0].salePrice}</p>:null}
+                        {csEpic.length!==0?csEpic[0].isOnSale==="0"?<p>${csEpic[0].salePrice}</p>:<p><span className='st-strike'>{csEpic[0].normalPrice}</span><br/>${csEpic[0].salePrice}</p>:null}
                     </h2>
                     </Tooltip>
                     :null}
@@ -98,7 +97,7 @@ const StoreTile = ({stores, year, deals}) => {
                         <img src="https://cdn.worldvectorlogo.com/logos/origin-1.svg
                         " alt="epic" className="stm"/>
                         </a>
-                        {csOrig[0].isOnSale==="0"?<p>${csOrig[0].salePrice}</p>:<p>Sale Price:<br/>${csOrig[0].salePrice}</p>}
+                        {csOrig[0].isOnSale==="0"?<p>${csOrig[0].salePrice}</p>:<p><span className='st-strike'>{csOrig[0].normalPrice}</span><br/>${csOrig[0].salePrice}</p>}
                     </h2>
                     </Tooltip>
                     :null}
@@ -109,7 +108,7 @@ const StoreTile = ({stores, year, deals}) => {
                         <img src="https://cdn.worldvectorlogo.com/logos/humble-bundle-logo.svg
                         " alt="epic" className="stm"/>
                         </a>
-                        {csHumb[0].isOnSale==="0"?<p>${csHumb[0].salePrice}</p>:<p>Sale Price:<br/>${csHumb[0].salePrice}</p>}
+                        {csHumb[0].isOnSale==="0"?<p>${csHumb[0].salePrice}</p>:<p><span className='st-strike'>{csHumb[0].normalPrice}</span><br/>${csHumb[0].salePrice}</p>}
                     </h2>
                     </Tooltip>
                     :null}
@@ -120,7 +119,7 @@ const StoreTile = ({stores, year, deals}) => {
                         <img src="https://cdn.worldvectorlogo.com/logos/ubisoft-logo.svg
                         " alt="epic" className="stm"/>
                         </a>
-                        {csUplay[0].isOnSale==="0"?<p>${csUplay[0].salePrice}</p>:<p>Sale Price:<br/>${csUplay[0].salePrice}</p>}
+                        {csUplay[0].isOnSale==="0"?<p>${csUplay[0].salePrice}</p>:<p><span className='st-strike'>{csUplay[0].normalPrice}</span><br/>${csUplay[0].salePrice}</p>}
                     </h2>
                     </Tooltip>
                     :null}
@@ -132,6 +131,7 @@ const StoreTile = ({stores, year, deals}) => {
                         <img src="https://cdn.worldvectorlogo.com/logos/xbox-9.svg
                         " alt="epic" className="stm"/>    
                         </a>
+                        <p></p>
                     </h2>
                     </Tooltip>
                     :null}

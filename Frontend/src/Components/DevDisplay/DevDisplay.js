@@ -5,6 +5,7 @@ import './DevDisplay.css'
 import {MdGamepad} from 'react-icons/md'
 import SearchRes from '../SearchRes/SearchRes';
 import Navbar from '../Navbar/Navbar';
+import LoadMan from '../LoadMan/LoadMan';
 
 const API_URL = "https://api.rawg.io/api/games";
 const DEVS_URL = "https://api.rawg.io/api/developers"
@@ -13,17 +14,19 @@ const DevDisplay = () => {
     const devDet = useParams();
     console.log("DEVDET", devDet);
     const [result, setResult] = useState([]);
+    const [loading, setLoading] = useState(true);
     const [devs, setDevs] = useState([]);
 
     useEffect(() => {
         const gameDet = () => {
             axios({
-                url: `http://localhost:5001/${API_URL}?developers=${devDet.devId}&key=${process.env.REACT_APP_RAWG_KEY}&page_size=22&ordering=-rating`,
+                url: `${process.env.REACT_APP_CORS_URL}/${API_URL}?developers=${devDet.devId}&key=${process.env.REACT_APP_RAWG_KEY}&page_size=22&ordering=-rating`,
                 headers:{
                     'X-Requested-With': 'XMLHttpRequest'
                 }, 
                 method: 'GET',
             }).then(response => {setResult(response.data.results);
+                setLoading(false);
                 // setIsLoading(false);
             }
             ).catch(err=>{console.log(err);})
@@ -32,7 +35,7 @@ const DevDisplay = () => {
 
         const devsData = () => {
             axios({
-                url: `http://localhost:5001/${DEVS_URL}/${devDet.devId}?key=${process.env.REACT_APP_RAWG_KEY}`,
+                url: `${process.env.REACT_APP_CORS_URL}/${DEVS_URL}/${devDet.devId}?key=${process.env.REACT_APP_RAWG_KEY}`,
                 headers:{
                     'X-Requested-With': 'XMLHttpRequest'
                 }, 
@@ -67,6 +70,7 @@ const DevDisplay = () => {
     //!
     return (
         <div className="dd">
+            {loading && <LoadMan/>}
             <header>
                     <Navbar/>
             </header>
@@ -77,7 +81,7 @@ const DevDisplay = () => {
                         <p>DEVELOPER SHOWCASE</p>
                     </div>
                 </div>
-                <div className="dev-search-res">
+                <div className={result.length!==0?"search-res animate__animated animate__fadeInDown":"search-res"}>
                     {flt.map(game=>
                     <SearchRes
                     key={game.name} 

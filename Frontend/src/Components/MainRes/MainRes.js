@@ -44,14 +44,14 @@ const MainRes = ({match}) => {
         stmURL = stm[0];//accessing the ONLY value of stm array, the steam object
         let id = stmURL.url.split('/');
         steamid = id[4]; //! give this as URL prop to buy now 
-        console.log("Steam ID of app : ", steamid);
+        // console.log("Steam ID of app : ", steamid);
     }
     //! steamID end
 
     useEffect(() => {
         const gameDet = () => {
             axios({
-                url: `http://localhost:5001/${DET_URL}/${gameid}?key=${process.env.REACT_APP_RAWG_KEY}`,
+                url: `${process.env.REACT_APP_CORS_URL}/${DET_URL}/${gameid}?key=${process.env.REACT_APP_RAWG_KEY}`,
                 headers:{
                     'X-Requested-With': 'XMLHttpRequest'
                 }, 
@@ -64,7 +64,7 @@ const MainRes = ({match}) => {
         gameDet();
         const gameSS = () =>{
             axios({
-                url: `http://localhost:5001/${DET_URL}/${slug}/screenshots?key=${process.env.REACT_APP_RAWG_KEY}`,
+                url: `${process.env.REACT_APP_CORS_URL}/${DET_URL}/${slug}/screenshots?key=${process.env.REACT_APP_RAWG_KEY}`,
                 headers:{
                     'X-Requested-With': 'XMLHttpRequest'
                 }, 
@@ -77,7 +77,7 @@ const MainRes = ({match}) => {
         gameSS();
         const gameStore = () =>{
             axios({
-                url: `http://localhost:5001/${DET_URL}/${slug}/stores?key=${process.env.REACT_APP_RAWG_KEY}`,
+                url: `${process.env.REACT_APP_CORS_URL}/${DET_URL}/${slug}/stores?key=${process.env.REACT_APP_RAWG_KEY}`,
                 headers:{
                     'X-Requested-With': 'XMLHttpRequest'
                 }, 
@@ -221,6 +221,12 @@ const MainRes = ({match}) => {
                                         <Link to="/reg">
                                         <button className="main-but">Log In to add game to wishlist</button>
                                         </Link>}
+                                        {exists===true?
+                                        <Link to="/" target="_blank" rel="noopener noreferrer">
+                                            <button className='main-but'>
+                                                View Wishlist
+                                            </button>
+                                        </Link>:null}
                                 </div>
                                 <div className="main-genre">
                                 {details.length!==0?details.genres.map((gen, pos)=>

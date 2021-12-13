@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import SearchRes from '../SearchRes/SearchRes';
 import axios from 'axios';
 import {MdGamepad} from 'react-icons/md'
-import {FaArrowCircleUp} from 'react-icons/fa';
+// import {FaArrowCircleUp} from 'react-icons/fa';
 import {FiSearch} from 'react-icons/fi'
 import 'animate.css';
 import './SearchComp.css';
@@ -48,10 +48,12 @@ const SearchComp = () => {
     //         })
     //     .catch(err=>{console.log(err);})
     }
-
+    // console.log("URLLLLL", process.env.REACT_APP_CORS_URL);
     const gameSearch = () => {
+        setGames([]);
+        setSearchLoaded(false);
         axios({
-            url: `http://localhost:5001/${API_URL}?key=${process.env.REACT_APP_RAWG_KEY}&search=${searchGame}&platforms=1,3,4,7,18,21,186,187,16,15,19,17&page_size=20&search_precise=true`,
+            url: `${process.env.REACT_APP_CORS_URL}/${API_URL}?key=${process.env.REACT_APP_RAWG_KEY}&search=${searchGame}&platforms=1,3,4,7,18,21,186,187,16,15,19,17&page_size=20&search_precise=true`,
             headers:{
                 'X-Requested-With': 'XMLHttpRequest'
             }, 
@@ -106,7 +108,7 @@ const SearchComp = () => {
                 <FiSearch className="search-sub"  onClick={gameSearch}/>
             </div>
             {errStatus!==true?
-            <div className="search-res animate__animated animate__fadeInDown">
+            <div className={games.length!==0?"search-res animate__animated animate__fadeInDown":"search-res"}>
                 {results.length?results.map(game=>
                     <SearchRes
                     key={game.name} 

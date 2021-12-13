@@ -249,3 +249,44 @@ i {
 		width: 650px;
 	}
 }
+@media (max-width: 660px) {
+	.reg-container {
+		width: 550px;
+	}
+	form {
+		padding: 0 30px;
+	}
+}
+@media (max-width: 550px) {
+	.reg-container {
+		width: 450px;
+	}
+	form {
+		padding: 0 10px;
+	}
+	.ghost {
+		padding: 15px;
+	}
+}
+@media (max-width: 460px) {
+	.reg-container {
+		width: 400px;
+	}
+	form {
+		padding: 0 5px;
+	}
+	.ghost {
+		padding: 10px;
+	}
+}
+@media (max-width: 410px) {
+	.reg-container {
+		width: 350px;
+	}
+	form {
+		padding: 0 2px;
+	}
+	.ghost {
+		padding: 5px;
+	}
+}

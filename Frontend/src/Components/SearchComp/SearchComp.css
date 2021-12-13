@@ -1,7 +1,8 @@
 .animate__animated,
 .animate__fadeInDown {
-	transition: 3s;
+	transition: 1s;
 	animation-duration: 1.5s;
+	/* animation-delay: 5s; */
 }
 
 .search-comp {

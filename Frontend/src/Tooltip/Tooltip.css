@@ -10,6 +10,8 @@
 	border-radius: 5px;
 	top: calc(100% + 5px);
 	display: none;
+	width: fit-content;
+	white-space: nowrap;
 }
 
 .tooltip-box.visible {
@@ -25,4 +27,28 @@
 	border-width: 5px;
 	border-style: solid;
 	border-color: transparent transparent rgba(0, 0, 0, 0.7) transparent;
+}
+@media (max-width: 1000px) {
+	.tooltip-box {
+		padding: 3px;
+	}
+	.tooltip-box.visible {
+		font-size: 0.6rem;
+	}
+}
+@media (max-width: 355px) {
+	.tooltip-box {
+		padding: 3px;
+	}
+	.tooltip-box.visible {
+		font-size: 0.4rem;
+	}
+}
+@media (max-width: 410px) {
+	.tooltip-box {
+		padding: 3px;
+	}
+	.tooltip-box.visible {
+		font-size: 0.4rem;
+	}
 }

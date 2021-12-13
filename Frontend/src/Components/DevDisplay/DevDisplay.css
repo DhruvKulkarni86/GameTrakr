@@ -43,13 +43,17 @@
 .dd-head h1 {
 	margin: 0 auto;
 }
-.dev-search-res {
-	display: grid;
-	min-height: auto;
-	justify-content: center;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(4, 0.1fr);
-	grid-column-gap: 3.59em;
-	grid-row-gap: 3.5em;
-	margin-bottom: 15px;
+
+@media (max-width: 380px) {
+	.dd-head {
+		margin: 2.6em;
+	}
+	.dd-title h1 {
+		font-size: 1.5rem;
+	}
+}
+@media (max-width: 280px) {
+	.dd-title h1 {
+		font-size: 1rem;
+	}
 }
