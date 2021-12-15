@@ -53,7 +53,7 @@ const SearchComp = () => {
         setGames([]);
         setSearchLoaded(false);
         axios({
-            url: `${process.env.REACT_APP_CORS_URL}/${API_URL}?key=${process.env.REACT_APP_RAWG_KEY}&search=${searchGame}&platforms=1,3,4,7,18,21,186,187,16,15,19,17&page_size=20&search_precise=true`,
+            url: `${API_URL}?key=${process.env.REACT_APP_RAWG_KEY}&search=${searchGame}&platforms=1,3,4,7,18,21,186,187,16,15,19,17&page_size=20&search_precise=true`,
             headers:{
                 'X-Requested-With': 'XMLHttpRequest'
             }, 
@@ -108,7 +108,7 @@ const SearchComp = () => {
                 <FiSearch className="search-sub"  onClick={gameSearch}/>
             </div>
             {errStatus!==true?
-            <div className={games.length!==0?"search-res animate__animated animate__fadeInDown":"search-res"}>
+            <div className={games.length!==0?"search-res animate__animated animate__fadeIn":"search-res"}>
                 {results.length?results.map(game=>
                     <SearchRes
                     key={game.name} 

@@ -43,7 +43,6 @@
 .dd-head h1 {
 	margin: 0 auto;
 }
-
 @media (max-width: 380px) {
 	.dd-head {
 		margin: 2.6em;

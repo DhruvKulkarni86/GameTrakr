@@ -49,7 +49,7 @@ const Reg = () => {
 
     const submit = e =>{
         e.preventDefault();
-        axios.post("http://localhost:4000/signup", formdata).then((response)=>{
+        axios.post(`${process.env.REACT_APP_BACK_URL}/signup`, formdata).then((response)=>{
             console.log(response);
             if(response.status===200){
                 setRegStatus(response.status);
@@ -90,7 +90,7 @@ const Reg = () => {
             lemail:'',
             lpassword:''
         })
-        axios.post("http://localhost:4000/login", loginFD).then(
+        axios.post(`${process.env.REACT_APP_BACK_URL}/login`, loginFD).then(
             (response)=>{
                 console.log(response);
                 if(response.status===200){

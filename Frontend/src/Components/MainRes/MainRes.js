@@ -23,6 +23,7 @@ const MainRes = ({match}) => {
     const [isLoading, setIsLoading] = useState(true)
     const [wish, setWish] = useState([]);
     const [exists, setExists] = useState(false);
+    const [errCode, setErrCode] = useState("");
 
     const  tkn = localStorage.getItem("token");
     let user = localStorage.getItem("Username");
@@ -51,7 +52,7 @@ const MainRes = ({match}) => {
     useEffect(() => {
         const gameDet = () => {
             axios({
-                url: `${process.env.REACT_APP_CORS_URL}/${DET_URL}/${gameid}?key=${process.env.REACT_APP_RAWG_KEY}`,
+                url: `${DET_URL}/${gameid}?key=${process.env.REACT_APP_RAWG_KEY}`,
                 headers:{
                     'X-Requested-With': 'XMLHttpRequest'
                 }, 
@@ -64,7 +65,7 @@ const MainRes = ({match}) => {
         gameDet();
         const gameSS = () =>{
             axios({
-                url: `${process.env.REACT_APP_CORS_URL}/${DET_URL}/${slug}/screenshots?key=${process.env.REACT_APP_RAWG_KEY}`,
+                url: `${DET_URL}/${slug}/screenshots?key=${process.env.REACT_APP_RAWG_KEY}`,
                 headers:{
                     'X-Requested-With': 'XMLHttpRequest'
                 }, 
@@ -77,7 +78,7 @@ const MainRes = ({match}) => {
         gameSS();
         const gameStore = () =>{
             axios({
-                url: `${process.env.REACT_APP_CORS_URL}/${DET_URL}/${slug}/stores?key=${process.env.REACT_APP_RAWG_KEY}`,
+                url: `${DET_URL}/${slug}/stores?key=${process.env.REACT_APP_RAWG_KEY}`,
                 headers:{
                     'X-Requested-With': 'XMLHttpRequest'
                 }, 
@@ -146,7 +147,7 @@ const MainRes = ({match}) => {
         console.log("U2", wish);
         console.log(tkn);
         axios({
-            url: `http://localhost:4000/wishlist`,
+            url: `${process.env.REACT_APP_BACK_URL}/wishlist`,
             headers:{
                 'X-Requested-With': 'XMLHttpRequest',
                 'Authorization':localStorage.getItem("token")
@@ -158,7 +159,11 @@ const MainRes = ({match}) => {
             {
                 console.log(response);
             })
-        .catch(err=>{console.log(err);})
+        .catch(err=>{console.log(err);
+            if(err.response.status===403){
+                setErrCode("403");
+            }
+        })
     }
     //!addTowish
 
@@ -175,7 +180,7 @@ const MainRes = ({match}) => {
         console.log("U2", wish);
         console.log(tkn);
         axios({
-            url: `http://localhost:4000/wishlist`,
+            url: `${process.env.REACT_APP_BACK_URL}/wishlist`,
             headers:{
                 'X-Requested-With': 'XMLHttpRequest',
                 'Authorization':localStorage.getItem("token")
@@ -191,7 +196,11 @@ const MainRes = ({match}) => {
                 setWish(JSON.parse(localStorage.getItem("Wishlist")));
                 setExists(false);
             })
-        .catch(err=>{console.log(err);})
+        .catch(err=>{console.log(err);
+            if(err.response.status===403){
+                setErrCode("403");
+            }
+        })
     }
     //!removeWish
     // console.log("BRUH ARR", bruharr);
@@ -216,17 +225,20 @@ const MainRes = ({match}) => {
                                     {user!==null&&exists===false?
                                         <button className="main-but" onClick={addToWish}>
                                         Add to Wishlist
-                                        </button>:exists===true?
+                                        </button>:exists===true&&errCode!=="403"?
                                         <button className="main-but" onClick={removeWish}>Remove</button>:
                                         <Link to="/reg">
                                         <button className="main-but">Log In to add game to wishlist</button>
                                         </Link>}
-                                        {exists===true?
+                                        {exists===true&&errCode!=="403"?
                                         <Link to="/" target="_blank" rel="noopener noreferrer">
                                             <button className='main-but'>
                                                 View Wishlist
                                             </button>
                                         </Link>:null}
+                                </div>
+                                <div className='main-err'>
+                                    {errCode===""?null:errCode==="403"?<Link className="link sr-link" to="/reg"><p className='pub-name'>Action Failed, Login Again!</p></Link>:"bruh"}
                                 </div>
                                 <div className="main-genre">
                                 {details.length!==0?details.genres.map((gen, pos)=>

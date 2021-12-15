@@ -20,7 +20,7 @@ const DevDisplay = () => {
     useEffect(() => {
         const gameDet = () => {
             axios({
-                url: `${process.env.REACT_APP_CORS_URL}/${API_URL}?developers=${devDet.devId}&key=${process.env.REACT_APP_RAWG_KEY}&page_size=22&ordering=-rating`,
+                url: `${API_URL}?developers=${devDet.devId}&key=${process.env.REACT_APP_RAWG_KEY}&page_size=22&ordering=-rating`,
                 headers:{
                     'X-Requested-With': 'XMLHttpRequest'
                 }, 
@@ -35,7 +35,7 @@ const DevDisplay = () => {
 
         const devsData = () => {
             axios({
-                url: `${process.env.REACT_APP_CORS_URL}/${DEVS_URL}/${devDet.devId}?key=${process.env.REACT_APP_RAWG_KEY}`,
+                url: `${DEVS_URL}/${devDet.devId}?key=${process.env.REACT_APP_RAWG_KEY}`,
                 headers:{
                     'X-Requested-With': 'XMLHttpRequest'
                 }, 
@@ -81,7 +81,7 @@ const DevDisplay = () => {
                         <p>DEVELOPER SHOWCASE</p>
                     </div>
                 </div>
-                <div className={result.length!==0?"search-res animate__animated animate__fadeInDown":"search-res"}>
+                <div className={result.length!==0?"search-res animate__animated animate__fadeIn":"search-res"}>
                     {flt.map(game=>
                     <SearchRes
                     key={game.name} 

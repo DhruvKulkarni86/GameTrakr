@@ -154,7 +154,8 @@ nav {
 	}
 	.s1 {
 		/* gap: 2rem; */
-		justify-content: space-around;
+		justify-content: center;
+		align-items: center;
 	}
 	.heroTxt {
 		align-self: center;
@@ -182,7 +183,8 @@ nav {
 @media (max-width: 350px) {
 	.s1 {
 		/* gap: 2rem; */
-		justify-content: space-around;
+		justify-content: center;
+		align-items: center;
 	}
 	.heroTxt {
 		font-size: 2rem;

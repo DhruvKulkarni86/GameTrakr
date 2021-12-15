@@ -25,7 +25,7 @@ const GenreMain = ({match}) => {
     useEffect(() => {
         const gameDet = () => {
             axios({
-                url: `${process.env.REACT_APP_CORS_URL}/${API_URL}?genres=${genreid}&key=${process.env.REACT_APP_RAWG_KEY}&page_size=9`,
+                url: `${API_URL}?genres=${genreid}&key=${process.env.REACT_APP_RAWG_KEY}&page_size=9`,
                 headers:{
                     'X-Requested-With': 'XMLHttpRequest'
                 }, 
@@ -42,7 +42,7 @@ const GenreMain = ({match}) => {
 
         const genreDet = () => {
             axios({
-                url: `${process.env.REACT_APP_CORS_URL}/${GEN_URL}/${genreid}?key=${process.env.REACT_APP_RAWG_KEY}`,
+                url: `${GEN_URL}/${genreid}?key=${process.env.REACT_APP_RAWG_KEY}`,
                 headers:{
                     'X-Requested-With': 'XMLHttpRequest'
                 }, 
@@ -118,7 +118,7 @@ const GenreMain = ({match}) => {
                         <h1 className='gen-title'>{genrename}</h1>
                     </div>
                 </div>
-                <div className={result.length!==0?"search-res animate__animated animate__fadeInDown":"search-res"}>
+                <div className={result.length!==0?"search-res animate__animated animate__fadeIn":"search-res"}>
                     {flt.map(game=>
                     <SearchRes
                     key={game.name} 

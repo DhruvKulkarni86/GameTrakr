@@ -192,6 +192,13 @@
 	.side-top {
 		width: 80%;
 		align-self: center;
+		padding: 30px;
+	}
+	.side-hori {
+		/* padding: 30px; */
+	}
+	.pub-head {
+		font-size: 1rem;
 	}
 	.store {
 		/* max-width: 80%; */

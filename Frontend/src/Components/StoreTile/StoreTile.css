@@ -1,5 +1,5 @@
 .st-wrap {
-	padding: 15px;
+	padding: 5px;
 	display: flex;
 	font-family: "Roboto Condensed", sans-serif;
 	gap: 1rem;
@@ -7,17 +7,19 @@
 	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 	backdrop-filter: blur(20px);
 	-webkit-backdrop-filter: blur(20px);
-	border-radius: 10px;
+	border-radius: 5px;
 	border: 1px solid rgba(255, 255, 255, 0.18);
 }
 .st-strike {
 	text-decoration: line-through;
+	text-align: center;
 }
 .st-wrap img {
+	cursor: pointer;
 	transition: 0.3s;
 }
 .st-wrap img:hover {
-	transform: translateY(-10px);
+	transform: scale(1.2);
 }
 .stm {
 	/* max-width: 100%; */
@@ -26,7 +28,7 @@
 	align-self: center;
 }
 .st-wrap p {
-	font-size: 1.3rem;
+	font-size: 1rem;
 	font-weight: 200;
 }
 @media (max-width: 505px) {

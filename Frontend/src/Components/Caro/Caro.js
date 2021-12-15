@@ -35,7 +35,7 @@ const Caro = ({ss}) => {
                 return(
                     <div className={index===current ? 'cr-active' : 'cr-slide'} key={index}>
                         {index === current && (
-                            <img src={img} alt="" className={dir==="L"?"cr-image animate__animated animate__fadeInDown":dir==="R"?"cr-image animate__animated animate__fadeInUp":"cr-image"}/>
+                            <img src={img} alt="" className={dir==="L"?"cr-image animate__animated animate__fadeIn":dir==="R"?"cr-image animate__animated animate__fadeIn":"cr-image"}/>
                         )}
                     </div>
                 )

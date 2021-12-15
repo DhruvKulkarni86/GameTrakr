@@ -38,8 +38,11 @@
 .sr-title {
 	max-width: fit-content;
 	padding-left: 5px;
-	text-align: left;
-	font-size: 0.99rem;
+	/* font-family: "Bebas Neue", cursive; */
+	/* letter-spacing: 2px; */
+	/* text-align: center; */
+	width: 100%;
+	/* font-size: 1.5rem; */
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
@@ -64,7 +67,7 @@
 
 .sr-icons {
 	display: flex;
-	font-size: 0.9rem;
+	font-size: 0.8rem;
 	justify-content: flex-start;
 	padding-left: 5px;
 }
@@ -89,7 +92,7 @@
 }
 .sr-genre:hover {
 	overflow: visible;
-	white-space: normal;
+	white-space: wrap;
 	height: auto;
 }
 .sr-lnk {
