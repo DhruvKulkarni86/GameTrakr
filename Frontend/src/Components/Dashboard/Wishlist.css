@@ -64,6 +64,7 @@
 	margin-right: 19px;
 	width: 292px;
 	height: 136px;
+	object-fit: cover;
 }
 .console_game {
 	display: flex;
