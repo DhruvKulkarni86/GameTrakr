@@ -64,7 +64,6 @@
 	margin-right: 19px;
 	width: 292px;
 	height: 136px;
-	object-fit: cover;
 }
 .console_game {
 	display: flex;
@@ -179,6 +178,7 @@
 	height: 136px;
 	width: 292px;
 	border-radius: 3px;
+	object-fit: cover;
 }
 .delete {
 	cursor: pointer;

@@ -24,7 +24,7 @@ const Landing = () => {
                                     <Link to="/reg" className="link">
                                         <p className='lan-acct'>SignIn</p>
                                     </Link>:
-                                    <Link to="/" className="link">
+                                    <Link to="/dashboard" className="link">
                                         <p className='lan-acct'>{uname}</p>
                                     </Link>}
                             {uname===null?null:
