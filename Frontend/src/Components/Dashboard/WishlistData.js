@@ -116,6 +116,8 @@ const WishlistData = () => {
           <h3>Wishlist</h3>
         </div>
         {gamedet.map((game, index) => {
+          let gameurl = game.background_image.split("/");
+          let newURL = ` https://media.rawg.io/media/crop/600/400/${gameurl[4]}/${gameurl[5]}/${gameurl[6]}`;
           console.log("mad2", game);
           return (
             <>
@@ -125,7 +127,7 @@ const WishlistData = () => {
                   title={game.name}
                   gameID={game.id}
                   desc={game.description_raw}
-                  image={game.background_image}
+                  image={newURL}
                   rem={() => RemoveFromWishlist(game.id, game.name)}
                   slug={game.slug}
                   plat={game.parent_platforms}
