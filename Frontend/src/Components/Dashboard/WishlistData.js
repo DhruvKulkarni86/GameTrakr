@@ -32,12 +32,11 @@ const WishlistData = () => {
     };
     let newList = wishlist.filter((game) => game.gameID !== id);
     setWishlist(newList);
-    localStorage.setItem("Wishlist", JSON.stringify(wishlist));
     setGameDet(gamedet.filter((gm) => gm.id !== id));
     setRender(false);
     console.log(user);
     axios({
-      url: `http://localhost:4000/wishlist`,
+      url: `${process.env.REACT_APP_BACK_URL}/wishlist`,
       headers: {
         "X-Requested-With": "XMLHttpRequest",
         Authorization: localStorage.getItem("token"),
@@ -46,6 +45,7 @@ const WishlistData = () => {
       method: "DELETE",
     })
       .then((response) => {
+        localStorage.setItem("Wishlist", JSON.stringify(response.data.wishlist));
         console.log(response);
       })
       .catch((err) => {

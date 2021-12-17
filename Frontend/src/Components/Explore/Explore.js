@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "animate.css"
 import Navbar from '../Navbar/Navbar.js'
 import "./Explore.css";
 import Popular from "./Popular.js";

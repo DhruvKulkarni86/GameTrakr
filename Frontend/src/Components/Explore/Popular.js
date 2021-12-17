@@ -60,7 +60,7 @@ const Popular = () => {
           }
         </button>
         </div>
-         <div className="slide-btn-width-3">
+        <div className="slide-btn-width-3">
         <button onClick={() => scroll(-870)} className="prev-btn">
           {
             <p className="btn-left">{"<"}</p>

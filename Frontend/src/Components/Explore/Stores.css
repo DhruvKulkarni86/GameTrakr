@@ -1,142 +1,141 @@
 .steam-img {
-  background-image: url("https://cdn.akamai.steamstatic.com/store/home/store_home_share.jpg");
-  background-repeat: no-repeat;
-  width: 320px;
-  height: 200px;
-  border-radius: 5px;
-  transition: all 300ms ease-in-out;
-  background-size: cover;
-  background-position: 50%;
+	background-image: url("https://cdn.akamai.steamstatic.com/store/home/store_home_share.jpg");
+	background-repeat: no-repeat;
+	width: 320px;
+	height: 200px;
+	border-radius: 5px;
+	transition: all 300ms ease-in-out;
+	background-size: cover;
+	background-position: 50%;
 }
 
-.stores-card{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap:60px;
-  padding-bottom: 6rem;
+.stores-card {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 60px;
+	padding-bottom: 6rem;
 }
 
-.steam-img:hover{
-  transform: scale(1.1);
+.steam-img:hover {
+	transform: scale(1.1);
 }
-.epic-img:hover{
-  transform: scale(1.1);
+.epic-img:hover {
+	transform: scale(1.1);
 }
-.gog-img:hover{
-  transform: scale(1.1);
+.gog-img:hover {
+	transform: scale(1.1);
 }
 
-.stores-title{
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-grow: 1;
-  font-family: 'Poppins';
-  padding-bottom: 35px;
-  color: aliceblue;
-  font-size: 40px;
-  font-weight: 500;
+.stores-title {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	flex-grow: 1;
+	font-family: "Poppins";
+	padding-bottom: 35px;
+	color: aliceblue;
+	font-size: 40px;
+	font-weight: 500;
 }
 
 .epic-img {
-  background-image: url("https://static0.gamerantimages.com/wordpress/wp-content/uploads/2021/12/epic-games-store-logo-gold-background.jpg");
-  background-repeat: no-repeat;
-  width: 320px;
-  height: 200px;
-  border-radius: 5px;
-  transition: all 300ms ease-in-out;
-  background-size: cover;
-  background-position: 50%;
+	background-image: url("https://static0.gamerantimages.com/wordpress/wp-content/uploads/2021/12/epic-games-store-logo-gold-background.jpg");
+	background-repeat: no-repeat;
+	width: 320px;
+	height: 200px;
+	border-radius: 5px;
+	transition: all 300ms ease-in-out;
+	background-size: cover;
+	background-position: 50%;
 }
 
 .gog-img {
-  background-image: url("https://images.gog-statics.com/844bac20026bcb6faf3d308fe9ad38365b3df6d1b5c4b74d0db309b426c997c5.jpg");
-  background-repeat: no-repeat;
-  width: 320px;
-  height: 200px;
-  border-radius: 5px;
-  background-position: 45%;
-  transition: all 300ms ease-in-out;
-  background-size: cover;
+	background-image: url("https://images.gog-statics.com/844bac20026bcb6faf3d308fe9ad38365b3df6d1b5c4b74d0db309b426c997c5.jpg");
+	background-repeat: no-repeat;
+	width: 320px;
+	height: 200px;
+	border-radius: 5px;
+	background-position: 45%;
+	transition: all 300ms ease-in-out;
+	background-size: cover;
 }
 
-@media screen and (max-width:1047px) {
-  .stores-title{
-    justify-content: center;
-    font-size: 20px;
-  }
-  .stores-card{
-    padding-bottom: 15px;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-  .steam-img{
-    width: 260px;
-    height: 160px;
-    background-position: 50%;
-  }
-  .epic-img{
-    width: 260px;
-    height: 160px;
-    background-position: 50%;
-  }
-  .gog-img{
-    width: 260px;
-    height: 160px;
-    background-position: 50%;
-  }
-  
+@media screen and (max-width: 1047px) {
+	.stores-title {
+		justify-content: center;
+		font-size: 20px;
+	}
+	.stores-card {
+		padding-bottom: 15px;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+	.steam-img {
+		width: 260px;
+		height: 160px;
+		background-position: 50%;
+	}
+	.epic-img {
+		width: 260px;
+		height: 160px;
+		background-position: 50%;
+	}
+	.gog-img {
+		width: 260px;
+		height: 160px;
+		background-position: 50%;
+	}
 }
 
-@media screen and (max-width:1078px){
-  .stores-card{
-    gap: 50px;
-  }
+@media screen and (max-width: 1078px) {
+	.stores-card {
+		gap: 50px;
+	}
 }
 
-@media screen and (max-width:875px) {
-  .stores-title{
-    justify-content: center;
-  }
-  .stores-card{
-    justify-content: center;
-  }
-  .steam-img{
-    width: 220px;
-    height: 140px;
-  }
-  .epic-img{
-    width: 220px;
-    height: 140px;
-  }
-  .gog-img{
-    width: 220px;
-    height: 140px;
-  }
+@media screen and (max-width: 875px) {
+	.stores-title {
+		justify-content: center;
+	}
+	.stores-card {
+		justify-content: center;
+	}
+	.steam-img {
+		width: 220px;
+		height: 140px;
+	}
+	.epic-img {
+		width: 220px;
+		height: 140px;
+	}
+	.gog-img {
+		width: 220px;
+		height: 140px;
+	}
 }
-@media screen and (max-width:733px) {
-  .steam-img{
-    width: 180px;
-    height: 120px;
-  }
-  .epic-img{
-    width: 180px;
-    height: 120px;
-  }
-  .gog-img{
-    width: 180px;
-    height: 120px;
-  }
-  .stores-card{
-    gap:10px;
-  }
+@media screen and (max-width: 733px) {
+	.steam-img {
+		width: 180px;
+		height: 120px;
+	}
+	.epic-img {
+		width: 180px;
+		height: 120px;
+	}
+	.gog-img {
+		width: 180px;
+		height: 120px;
+	}
+	.stores-card {
+		gap: 10px;
+	}
 }
 
-@media screen and (max-width:644px) {
-  .stores-card{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+@media screen and (max-width: 644px) {
+	.stores-card {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 }

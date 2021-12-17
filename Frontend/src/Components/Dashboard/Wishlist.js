@@ -27,7 +27,7 @@ const Wishlist = ({
   useEffect(() => {
     axios
       .get(
-        `https://cors-anywhere.herokuapp.com/https://api.rawg.io/api/games/${slug}/stores?key=${process.env.REACT_APP_RAWG_KEY}`
+        `https://api.rawg.io/api/games/${slug}/stores?key=${process.env.REACT_APP_RAWG_KEY}`
       )
       .then((res) => {
         setStores((stores) => stores.concat(res.data.results));

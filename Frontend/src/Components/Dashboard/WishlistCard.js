@@ -15,7 +15,7 @@ const Wishlist = ({
   useEffect(() => {
     axios
       .get(
-        `https://cors-anywhere.herokuapp.com/https://api.rawg.io/api/games/${slug}/stores?key=${process.env.REACT_APP_RAWG_KEY}`
+        `https://api.rawg.io/api/games/${slug}/stores?key=${process.env.REACT_APP_RAWG_KEY}`
       )
       .then((res) => {
         setStores((stores) => stores.concat(res.data.results));
@@ -37,12 +37,14 @@ const Wishlist = ({
   }
 
   let redirect = `/view/${gameID}/${slug}`
+  let gameurl = image.split("/");
+  let newURL = ` https://media.rawg.io/media/crop/600/400/${gameurl[4]}/${gameurl[5]}/${gameurl[6]}`;
 
   return (
       <div className="wishlistcard_row">
         <div className="card_capsule">
           <a href={redirect}>
-            <img src={`${image}`} alt="o" className="card_capsule_img" />
+            <img src={`${newURL}`} alt="o" className="card_capsule_img" />
           </a>
         </div>
         <h3 className="card_title"><a href={`/view/${gameID}/${slug}`}>{title}</a></h3>

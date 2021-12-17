@@ -3,7 +3,7 @@ import axios from "axios";
 
 import DailyDeals from "./DailyDeals";
 
-import "../../../index.css";
+// import "../../../App.css";
 
 import Navbar from "../../Navbar/Navbar";
 import LoadMan from "../../LoadMan/LoadMan";

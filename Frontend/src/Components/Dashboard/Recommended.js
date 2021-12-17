@@ -40,20 +40,26 @@ const Recommended = () => {
     };
     Recommend();
   }, [DET_URL, wishlist]);
-  console.log(recommended);
+  // console.log(recommended);
 
+  const uniqueGames = Array.from(new Set(recommended.map(a => a.id)))
+ .map(id => {
+   return recommended.find(a => a.id === id)
+ })
   if (wishlist.length > 0 && user !== null) {
     return (
       <div className="transform">
         {loading}
         <div className="recommend_container">
           {recommended.length !== 0 ? 
-          <h3 className="recommend_span">Recommended Games Based On Your Wishlist</h3>
+          <h3 className="wishlistcard_header">Recommended Games Based On Your Wishlist</h3>
         :<h4 className="recommend_span">Add more Games to wishlist to see your Recommendations</h4>}
         </div>
         <div id="slide" className="pop_explore_container">
           {wishlist.length > 0 ? (
-            recommended.map((game, index) => {
+            uniqueGames.slice(0,10).sort(() => (Math.random() > .5) ? 1 : -1).map((game, index) => {
+              let gameurl = game.background_image.split("/");
+              let newURL = ` https://media.rawg.io/media/crop/600/400/${gameurl[4]}/${gameurl[5]}/${gameurl[6]}`;
               return (
                 <div className="slide" key={index}>
                   <div>
@@ -61,7 +67,7 @@ const Recommended = () => {
                       <div className="explore_page">
                         <div className="recommend_game_image">
                           <img
-                            src={game.background_image}
+                            src={newURL}
                             alt={game.name}
                             className="recommend_game_image"
                           />

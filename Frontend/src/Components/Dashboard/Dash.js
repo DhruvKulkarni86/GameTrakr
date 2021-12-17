@@ -7,7 +7,7 @@ import Recommended from "./Recommended";
 import LoadMan from "../LoadMan/LoadMan.js";
 import { NavLink } from "react-router-dom";
 
-const Explore = () => {
+const Dash = () => {
   const [Loading, isLoading] = useState(true)
   const[wishlist, setwishlist] = useState([])
   let user = localStorage.getItem("Username")
@@ -26,8 +26,8 @@ const Explore = () => {
     );
   }, []);
 
-  console.log(wishlist.length);
-  console.log(user!== null && wishlist.length === 0);
+  // console.log(wishlist.length);
+  // console.log(user!== null && wishlist.length === 0);
 
   if(user!==null && wishlist.length>0){
     return (
@@ -66,4 +66,4 @@ const Explore = () => {
   }
 };
 
-export default Explore;
+export default Dash;

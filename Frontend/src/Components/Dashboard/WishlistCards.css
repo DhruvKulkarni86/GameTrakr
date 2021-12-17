@@ -1,204 +1,216 @@
 a {
-  text-decoration: none !important;
-  color: inherit;
+	text-decoration: none !important;
+	color: inherit;
 }
 .wishlistcard_header {
-  display: flex;
-  justify-content: space-between;
-  padding: 50px;
+	display: flex;
+	justify-content: space-between;
+	padding: 50px;
 }
 .wishlistcard_wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 20px;
 }
 .wishlist {
-  transition: all 0.2s ease-in-out;
-  font-size: 20px;
-  color: aliceblue;
-  font-family: 'Poppins';
-  font-weight: 400;
+	transition: all 0.2s ease-in-out;
+	font-size: 20px;
+	color: aliceblue;
+	font-family: "Poppins";
+	font-weight: 400;
 }
 
-.welcome{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  font-family: 'Poppins';
-  color: aliceblue;
-  font-size: 2rem;
-  padding: 1em;
+.welcome {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	font-family: "Poppins";
+	color: aliceblue;
+	font-size: 2rem;
+	padding-top: 50px;
 }
 
-.own_h3{
-  color: aliceblue;
-  font-family: 'Poppins';
-  justify-content: space-around;
-  font-size: 30px;
-  /* padding: 10px; */
+.own_h3 {
+	color: aliceblue;
+	font-family: "Poppins";
+	justify-content: space-around;
+	font-size: 30px;
+	/* padding: 10px; */
 }
 
-.wishlist:hover{
-  color: red;
-  text-decoration: underline;
-  transform: scale(1.1);
+.wishlist:hover {
+	color: red;
+	text-decoration: underline;
+	transform: scale(1.1);
 }
 .wishlist_header h3 {
-  color: #fff;
-  margin: 3rem 0 0 3rem;
+	color: #fff;
+	margin: 3rem 0 0 3rem;
 }
 #wishlist_ctn {
-  position: relative;
+	position: relative;
 }
 .card_content {
-  position: relative;
-  margin-inline: 1rem;
-  min-width: 400px;
-  min-height: 200px;
+	position: relative;
+	margin-inline: 1rem;
+	min-width: 400px;
+	min-height: 200px;
 }
 .wishlistcard_row {
-  overflow: hidden;
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  padding: 16px 16px 0 16px;
-  color: #b2b8bd;
-  font-family: 'Poppins';
-  font-weight: 200;
-  transition: 300ms ease-in-out;
-  border-radius: 20px;
+	overflow: hidden;
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	padding: 16px 16px 0 16px;
+	color: #b2b8bd;
+	font-family: "Poppins";
+	font-weight: 200;
+	transition: 300ms ease-in-out;
+	border-radius: 20px;
+	width: 400px;
 }
 .card_capsule_img {
-  height: 190px;
-  width: 330px;
-  border-radius: 12px;
-}
-.wishlistcard_row:hover{
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  flex-grow: 1;
+	height: 190px;
+	width: 330px;
+	border-radius: 12px;
+	align-self: center;
 }
 .wishlistcard_row:hover {
-  background: rgba(255, 255, 255, 0.096);
-  border-radius: 15px;
-  transform: scale(1.1);
-  box-shadow: 0 4px 15px rgba(153, 153, 153, 0.3);
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	flex-grow: 1;
+}
+.wishlistcard_row:hover {
+	background: rgba(255, 255, 255, 0.096);
+	border-radius: 15px;
+	transform: scale(1.1);
+	box-shadow: 0 4px 15px rgba(153, 153, 153, 0.3);
 }
 .card_title {
-  color: aliceblue;
-  font-weight: 400;
-  margin: 0 0 15px 0;
-  overflow: hidden;
-  cursor: pointer;
-  margin-top: 1rem;
-  text-align: center;
-  font-family: 'Poppins';
-  display: flex;
-  justify-content: center;
+	color: aliceblue;
+	font-weight: 400;
+	width: 330px;
+	/* margin: 0 0 15px 0; */
+	/* overflow: hidden;
+	cursor: pointer;
+	margin-top: 1rem;
+	text-align: center;
+	width: 330px;
+	font-family: "Poppins";
+	display: flex;
+	justify-content: center; */
+	white-space: normal;
+	margin-bottom: 1.1rem;
+	font-family: "Poppins";
+	display: flex;
+	justify-content: center;
+	color: aliceblue;
+	margin-top: 1rem;
+	padding-bottom: 5px;
 }
 
-.error-text{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  height: 500px;
-  flex-direction: column;
-  color: aliceblue;
-  font-family: 'Poppins';
-  gap: 60px;
-  height: 60vh;
-  font-size: 2rem;
+.error-text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	height: 500px;
+	flex-direction: column;
+	color: aliceblue;
+	font-family: "Poppins";
+	gap: 60px;
+	height: 60vh;
+	font-size: 2rem;
 }
 
-.error-option{
-  font-weight: 100;
-  transition: 0.4s;
+.error-option {
+	font-weight: 100;
+	transition: 0.4s;
 }
-.error-option:hover{
-  color: rgb(184, 15, 15);
+.error-option:hover {
+	color: rgb(184, 15, 15);
 	transform: translateY(-10px);
 	border-bottom: 2px solid rgb(184, 15, 15);
 }
 
-@media screen and (max-width:1351px) {
-  .wishlistcard_row{
-    width: 330px;
-    /* display: contents; */
-  }
-  .card_capsule_img {
-    height: 200px;
-    width: 300px;
-  }
-  .card_content{
-    min-width: 0;
-    margin-top: 21px;
-    margin-inline: 5px;
-  }
-  .card_title{
-    font-size: 15px;
-  }
-  .wishlistcard_wrapper{
-    justify-content:center;
-    margin: 0;
-    min-height: auto;
-  }
+@media screen and (max-width: 1351px) {
+	.wishlistcard_row {
+		width: 330px;
+		/* display: contents; */
+	}
+	.card_capsule_img {
+		height: 200px;
+		width: 300px;
+	}
+	.card_content {
+		min-width: 0;
+		margin-top: 21px;
+		margin-inline: 5px;
+	}
+	.card_title {
+		font-size: 15px;
+	}
+	.wishlistcard_wrapper {
+		justify-content: center;
+		margin: 0;
+		min-height: auto;
+	}
 }
 
-@media screen and (max-width:1100px) {
-  .wishlistcard_header{
-    font-size: 16px;
-  }
-  .wishlistcard_row{
-    width: 280px;
-  }
-  .card_capsule_img {
-    height: 170px;
-    width: 260px;
-  }
-  .card_content{
-    min-width: 0;
-    margin-top: 21px;
-  }
-  .card_title{
-    font-size: 13px;
-  }
+@media screen and (max-width: 1100px) {
+	.wishlistcard_header {
+		font-size: 16px;
+	}
+	.wishlistcard_row {
+		width: 280px;
+	}
+	.card_capsule_img {
+		height: 170px;
+		width: 260px;
+	}
+	.card_content {
+		min-width: 0;
+		margin-top: 21px;
+	}
+	.card_title {
+		font-size: 13px;
+	}
 }
-@media screen and (max-width:872px) {
-  .wishlistcard_row{
-    gap: 10px;
-  }
-  .card_capsule_img {
-    height: 173px;
-    width: 260px;
-  }
-  .card_title{
-    font-size: 15px;
-  }
-  .wishlistcard_row{
-    width: 280px;
-    flex-wrap: wrap;
-  }
-  .wishlistcard_wrapper{
-    flex-wrap: wrap;
-  }
-} 
-@media screen and (max-width:500px) {
-  .wishlistcard_header{
-    padding: 0 0 20px 0;
-    justify-content: space-around;
-  }
-  .wishlist{
-    font-size: 20px;
-  }
-  .own_h3{
-    font-size: 20px;
-  }
-  .welcome{
-    font-size: 18px;
-    padding: 2em;
-  }
+@media screen and (max-width: 872px) {
+	.wishlistcard_row {
+		gap: 10px;
+	}
+	.card_capsule_img {
+		height: 173px;
+		width: 260px;
+	}
+	.card_title {
+		font-size: 15px;
+	}
+	.wishlistcard_row {
+		width: 280px;
+		flex-wrap: wrap;
+	}
+	.wishlistcard_wrapper {
+		flex-wrap: wrap;
+	}
+}
+@media screen and (max-width: 500px) {
+	.wishlistcard_header {
+		padding: 10px 0 2px 0;
+		justify-content: space-around;
+	}
+	.wishlist {
+		font-size: 20px;
+	}
+	.own_h3 {
+		font-size: 20px;
+	}
+	.welcome {
+		font-size: 18px;
+		padding-top: 50px;
+	}
 }
