@@ -1,0 +1,133 @@
+.genre-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* max-width: 79rem; */
+  /* margin: 0 0 0 8rem; */
+}
+
+.inner-genre-wrap {
+  /* display: flex; */
+  /* max-width: 382px; */
+  margin-bottom: 55px;
+  margin-inline: 18px;
+  /* border-radius: 73px; */
+}
+
+.genre-card {
+  display: flex;
+  width: 296px;
+  height: 13rem;
+  margin-inline: 18px;
+}
+
+.img-genre:hover {
+  box-shadow: rgba(75, 72, 72, 0.712) 0px 10px 36px 0px,
+    rgba(80, 76, 76, 0.822) 0px 0px 0px 1px;
+  border-radius: 23px;
+}
+
+.genre-img {
+  width: 320px;
+  height: 203px;
+  opacity: 0.9;
+}
+
+.img-genre {
+  width: 300px;
+  height: 200px;
+  border-radius: 23px;
+  opacity: 0.8;
+  transition: all 200ms ease-in-out;
+}
+
+.genre-name {
+  display: flex;
+  font-family: "Poppins";
+  font-size: 1.2rem;
+  color: aliceblue;
+  transform: translate(1rem, -2rem);
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.genre-title {
+  /* padding-bottom: 30px; */
+  /* text-align: center; */
+  /* left: 50%; */
+  display: flex;
+  /* right: 50%; */
+  justify-content: center;
+  flex-direction: row;
+  flex-grow: 1;
+  font-family: "Poppins";
+  padding-bottom: 35px;
+  color: aliceblue;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.genre-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media screen and (max-width: 769px) {
+  .genre-title {
+    font-size: 23px;
+  }
+  .genre-wrap {
+    margin: 0;
+    justify-content: center;
+  }
+  .inner-genre-wrap {
+    margin-bottom: 15px;
+    margin-inline: 0;
+  }
+  .genre-card {
+    width: 190px;
+    height: 120px;
+    margin-inline: none;
+  }
+  .img-genre{
+      width: 190px;
+      height: 120px;
+  }
+  .genre-img{
+      width: 190px;
+      height: 120px;
+  }
+  .genre-name{
+      font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .genre-title {
+    font-size: 23px;
+  }
+  .genre-wrap {
+    margin: 0;
+    justify-content: center;
+  }
+  .inner-genre-wrap {
+    margin-bottom: 15px;
+    margin-inline: 0;
+  }
+  .genre-card {
+    width: 190px;
+    height: 120px;
+    margin-inline: none;
+  }
+  .img-genre{
+      width: 190px;
+      height: 120px;
+  }
+  .genre-img{
+      width: 190px;
+      height: 120px;
+  }
+  .genre-name{
+      font-size: 1rem;
+  }
+}

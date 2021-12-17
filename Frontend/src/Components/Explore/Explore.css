@@ -1,0 +1,298 @@
+li {
+  list-style: none;
+}
+.explore_inner_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 0rem 0rem 0rem 3rem;
+  overflow: hidden;
+  width: 93%;
+  padding-top:10px;
+  /* overflow: auto; */
+  overflow: -moz-scrollbars-none;
+  scrollbar-width: none;
+}
+#slide {
+  scroll-behavior:smooth;
+}
+#slide-new-rel {
+  scroll-behavior: smooth;
+}
+#slide-pop{
+  scroll-behavior: smooth;
+}
+.slide-btn-width-4{
+  display: none;
+  margin-right: 3.5rem;
+}
+.slide-btn-width-3{
+  display: none;
+  margin-right: 3.5rem;
+}
+.pop_explore_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top:10px;
+  overflow: auto;
+  overflow: -moz-scrollbars-none;
+  scrollbar-width: none;
+  flex-wrap: wrap;
+}
+.recommend_game_image{
+  width: 260px;
+  height: 180px;
+  border-radius: 5px;
+}
+.recommend_container {
+  display: flex;
+  justify-content:center;
+  color: aliceblue;
+  font-family: 'Poppins';
+  font-size: 25px;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  padding:50px 0px 50px 0px;
+}
+.explore_container {
+  display: flex;
+  justify-content: space-between;
+  color: aliceblue;
+  font-family: 'Poppins';
+  flex-grow: 1;
+  flex-direction: row;
+  width: 100%;
+  padding-top:30px;
+  align-items: center;
+  align-content: space-between;
+}
+.anim{
+  max-height: 22rem;
+}
+.prev-btn{
+	border: none;
+	border-radius: 50%;
+	transition: ease-in;
+  background: none;
+  cursor: pointer;
+}
+.explore_inner_container::-webkit-scrollbar {
+   width: 0 !important ;
+   display:none;
+  }
+.btn-left:hover{
+  color: red;
+  transform: translateX(-10px);
+}
+.btn-right:hover{
+  color: red;
+  transform: translateX(10px);
+}
+.explore_main_container{
+  background: linear-gradient( 
+    288deg, rgba(105, 5, 5, 1) 0%, rgba(61, 11, 42, 1) 64%, rgb(10, 4, 51) 95% );
+    min-height: 100vh;
+}
+.next-btn{
+	border: none;
+	border-radius: 50%;
+	bottom: 30px;
+	transition: ease-in;
+  background: none;
+  cursor: pointer;
+  width: 50px;
+}
+.btn-right{
+  color: aliceblue;
+  font-family: 'Poppins';
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 100;
+  transition: all 0.25s ease-in-out;
+}
+.btn-left{
+  color: aliceblue;
+  font-family: 'Poppins';
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 100;
+  transition: all 0.25s ease-in-out;
+}
+.explore_page_container {
+  padding-bottom: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 1.3rem 3rem 0;
+}
+.explore_page {
+  margin-inline: 0.3rem;
+  transition: transform 300ms ease-in-out;
+  padding-inline: 15px;
+  padding: 0px 7px 0px 11px ;
+  border-radius: 6px;
+}
+.explore_page:hover {
+  transform: scale(1.05);
+}
+.own_span{
+  font-size: 25px;
+  font-weight: 400;
+  margin-left: 4rem;
+}
+.pop_span{
+  margin-left: 4rem;
+  margin-bottom: 1rem;
+  font-size: 25px;
+  font-weight: 400;
+}
+.slide-btn{
+  margin-right: 3.5rem;
+}
+.game_title {
+  white-space: normal;
+  margin-bottom: 1.1rem;
+  font-family: 'Poppins';
+  display: flex;
+  justify-content: center;
+  color: aliceblue;
+  margin-top: 1rem;
+  padding-bottom: 30px;
+  font-size: 19px;
+}
+.recommend_game_title{
+  white-space: normal;
+  margin-bottom: 1.1rem;
+  font-family: 'Poppins';
+  display: flex;
+  justify-content: center;
+  color: aliceblue;
+  margin-top: 1rem;
+  padding-bottom: 30px;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.explore_game_image {
+  width: 260px;
+  height: auto;
+  border-radius: 5px;
+}
+.explore_content {
+  text-overflow: ellipsis;
+  list-style: none;
+}
+.owned_span {
+  text-align: left;
+  color: aliceblue;
+  font-family: 'Poppins';
+  text-transform: uppercase;
+  margin-left: 3rem;
+}
+@media screen and (max-width:1347px) {
+  .explore_inner_container{
+    margin: auto;
+    overflow: hidden;
+  }
+  .explore_game_image{
+    width: 260px;
+    height: auto;
+  }
+  .game_title{
+    font-size: 15px;
+  }
+  .explore_main_container{
+    width: 100%;
+  }
+  .slide-btn{
+    display: none;
+  }
+  .slide-btn-width-4{
+    display:inline;
+  }
+}
+@media screen and (max-width:1100px) {
+  .own_span{
+    margin-left: 60px;
+  }
+  .pop_span{
+    margin-left: 60px;
+  }
+  .slide-btn-width-3{
+    margin-right: 1px;
+    display: inline;
+  }
+  .slide-btn-width-4{
+    display: none;
+  }
+}
+@media screen and (max-width:769px){
+  .own_span{
+    margin-left: 20px;
+  }
+  .anim{
+    max-height:17rem ;
+  }
+  .pop_span{
+    margin-left: 20px;
+  }
+  .slide-btn-width-4{
+    margin-right: 1px;
+  }
+  .explore_inner_container{
+    width: 48rem;
+    overflow:inherit;
+    overflow-y:hidden;
+  }
+  .explore_game_image{
+    width: 161px;
+    height: 107px;
+  }
+  .recommend_container{
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width:765px) {
+  .explore_inner_container{
+    max-width: 100%;
+    max-height: 13rem;
+  }
+  .explore_game_image{
+    width: 200px;
+    height: auto;
+  }
+  .slide-btn-width-3{
+    display: none;
+  }
+  .anim{
+    max-height: 15rem;
+  }
+}
+@media screen and (max-width:505px) {
+  .own_span{
+    font-size: 19px;
+    margin-top: 10px;
+  }
+  .pop_span{
+    font-size: 19px;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width:412px) {
+  .explore_game_image{
+    width: 150px;
+    aspect-ratio: 4/3;
+    height: auto;
+  }
+  .anim{
+    max-height: 14rem;
+  }
+  .explore_inner_container{
+    max-height: 13rem;
+  }
+}

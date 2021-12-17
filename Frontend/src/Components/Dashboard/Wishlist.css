@@ -1,0 +1,345 @@
+.wishlist_header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 15px 0 25px 0;
+  font-family: "Poppins";
+  text-transform: uppercase;
+  justify-content: flex-start;
+  font-size: 25px;
+  padding-left: 6rem;
+}
+.price_container{
+  display: flex;
+  flex-direction: column-reverse;
+}
+.wishlist_header h3 {
+  color: #fff;
+  margin: 3rem 0 0 3rem;
+}
+.page_content {
+  position: relative;
+  margin-inline: 130px;
+}
+.ps_img{
+  max-width: 30px;
+  height: auto;
+  margin-left: 15px;
+}
+.wishlist_row {
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  padding: 16px 16px 16px 16px;
+  background: rgba(255, 255, 255, 0.096);
+  color: #b2b8bd;
+  margin-bottom: 19px;
+  font-family: "Poppins";
+  font-weight: 200;
+  box-shadow: 0 0 5px rgba(219, 4, 4, 0.2);
+  border-radius: 5px;
+}
+.mid_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.prices{
+  color: aliceblue;
+  margin-top: 10px;
+}
+.normal-price{
+  text-decoration: line-through;
+  font-size: 15px;
+  color: aliceblue;
+  text-align: center;
+}
+.discount-price{
+  color: aliceblue;
+  text-align: center;
+}
+.image_capsule {
+  position: relative;
+  margin-right: 19px;
+  width: 292px;
+  height: 136px;
+}
+.console_game {
+  display: flex;
+}
+.wishlist_content {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex-grow: 1;
+}
+.title {
+  color: aliceblue;
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0 0 15px 0;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+}
+.purchase_area {
+  padding: 2px;
+  display: flex;
+  gap: 20px;
+}
+.icon_center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+.remove_btn {
+   padding: 0.5rem;
+  background: none;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  transition: all 500ms;
+  transform: scale(1.1);
+  font-size: 1.2rem;
+}
+.wishlist_main{
+  background: linear-gradient( 
+    288deg, rgba(105, 5, 5, 1) 0%, rgba(61, 11, 42, 1) 64%, rgb(10, 4, 51) 95% );
+    overflow: hidden;
+    min-height: 100vh;
+}
+.remove_btn_hidden{
+  padding: 0.4rem;
+  background: none;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  transition: all 500ms;
+  transform: scale(1.1);
+  display: none;
+  font-size: 1.2rem;
+}
+.purchase_deal_txt {
+  line-height: 41px;
+}
+.remove_btn:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+}
+.wishlist_row:hover {
+  background: #e258587a;
+  color: #c6cbcf;
+}
+.svg_icon {
+  display: flex;
+  justify-content: flex-start;
+  max-height: 30px;
+  gap: 25px;
+}
+.logos{
+  width: 30px;
+  height: 30px;
+}
+.xbox_img {
+  margin-left: 10px;
+  transform: translateY(-6px);
+  max-width: 2rem;
+}
+.discount_prices {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(112, 112, 112, 0.178);
+  justify-content: center;
+}
+.deal_pct {
+  background: linear-gradient(to right, #75b022 5%, #588a1b 95%);
+  color: aliceblue;
+  padding: 4px;
+  height: 30px;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  border-radius: 4px;
+  font-size: 15px;
+}
+.title:hover {
+  transform: translateY(-2.6px);
+  color: #75b022;
+  text-decoration: underline;
+}
+.capsule_img {
+  height: 136px;
+  width: 292px;
+  border-radius: 3px;
+}
+.delete {
+  cursor: pointer;
+  display: flex;
+  justify-content:flex-end ;
+}
+@media screen and (max-width: 1243px) {
+  .mid_container {
+    display: flex;
+  }
+}
+@media screen and (max-width:1071px){
+  .capsule_img{
+    width: 250px;
+    height: auto;
+  }
+  .image_capsule{
+    width: 255px;
+    height: 130px;
+  }
+  .title{
+    font-size: 20px;
+  }
+  .wishlist_row{
+    padding: 10px 16px 16px 10px;
+  }
+  .purchase_area{
+    gap: 10px;
+  }
+  .svg_icon{
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .title{
+    overflow: visible;
+  }
+  .wishlist_content{
+    max-height: 12rem;
+  }
+  .capsule_img{
+    width: 220px;
+  }
+  .image_capsule{
+    width: 210px;
+    height: auto;
+  }
+  .lower_columns{
+    justify-content: center;
+    flex-direction: row;
+    position: fixed;
+    margin-inline: 0;
+  }
+  .lower_column_price{
+    margin-bottom: 7px;
+  }
+  .svg_icon{
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width:875px) {
+  .capsule_img{
+    width: 200px;
+    height: auto;
+  }
+  .image_capsule{
+    width: 200px;
+    height: auto;
+  }
+  .title{
+    font-size: 15px;
+  }
+  .discount_area .discount_pct{
+    transform: none;
+    margin-right: auto
+  }
+  .discount-price{
+    font-size: 13px;
+  }
+  .normal-price{
+    font-size: 12px;
+  }
+  .deal_pct{
+    height: 25px;
+    padding: 2px;
+    font-size: 12px;
+  }
+  .prices{
+    margin-top: 5px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width:850px) {
+  .wishlist_row{
+    flex-direction: column;
+  }
+  .mid_container{
+    flex-direction: column;
+    gap: 10px;
+  }
+  .delete{
+    display: none;
+  }
+  .remove_btn_hidden{
+    display: inline;
+  }
+  .image_capsule{
+    width: 325px;
+    height: auto;
+  }
+  .capsule_img{
+    width: 350px;
+    height: auto;
+  }
+  .wishlist_content{
+    justify-content: center;
+    align-items: center;
+  }
+  #wishlist_ctn{
+    display: flex;
+    justify-content: center;
+  }
+  .title{
+    margin-top: 15px;
+    font-size: 20px;
+  }
+  .mid_container{
+    gap: 40px;
+  }
+  .svg_icon{
+    gap: 10px;
+    justify-content: center;
+  }
+  .purchase_area{
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 377px) {
+  .capsule_img{
+    width: 220px;
+    height: auto;
+  }
+  .image_capsule{
+    width: 195px;
+    height: auto;
+  }
+  .title{
+    font-size: 20px;
+  }
+  .mid_container{
+    gap: 30px;
+  }
+  .delete{
+    margin-top: 1px;
+  }
+  .purchase_area{
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+  }
+  .wishlist_content{
+    min-height: 200px;
+  }
+  .svg_icon{
+    gap: 30px;
+  }
+}

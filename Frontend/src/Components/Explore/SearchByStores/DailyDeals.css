@@ -1,0 +1,194 @@
+.sales_image{
+  width: 120px;
+  height: 50px;
+}
+.view-sales-btn{
+  border: none;
+  background: rgb(55, 62, 158);
+  border-radius: 5px;
+  color: aliceblue;
+  font-family: 'Poppins';
+  height: 40px;
+  transition: all 0.3s ease-in-out;
+  padding: 5px;
+}
+.sales_header{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:'Poppins';
+  text-transform: uppercase;
+  color: aliceblue;
+  font-size: 2rem;
+  backdrop-filter:brightness(30%);
+  height: 400px;
+  gap: 30px;
+  flex-direction: column;
+}
+
+.view-sales-btn:hover{
+  cursor: pointer;
+	transform: scale(1.2);
+	background: linear-gradient(to right, #75b022 5%, #588a1b 95%);
+}
+.sales_row {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    padding: 25px 5px 25px 5px;
+    color: aliceblue;
+    font-family: 'Poppins';
+    transition: all 0.25s ease-in-out;
+    width: 24rem;
+    gap: 15px;
+    /* row-gap: 15px; */
+    text-overflow: ellipsis;
+    text-align: start;
+    overflow: hidden;
+    align-items: center;
+}
+
+.steam-sales{
+  background: linear-gradient( 
+    288deg, rgba(105, 5, 5, 1) 0%, rgba(61, 11, 42, 1) 64%, rgb(10, 4, 51) 95% );
+}
+
+.main-background{
+  width: 100%;
+  height: 400px;
+  background: linear-gradient( 302deg, rgba(105, 5, 5, 1) 0%, rgba(61, 11, 42, 1) 64%, rgb(10, 4, 51) 95% );
+  background-position: 10%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 5rem;
+}
+.main-sales-wrap{
+  display: flex;
+  justify-content: center;
+}
+.sales_title {
+  font-weight: 400;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.head-sales{
+  display: flex;
+  flex-direction: column;
+}
+
+.sales_url {
+  color: inherit;
+}
+.sales_discount_area{
+  background: linear-gradient(to right, #75b022 5%, #588a1b 95%)
+}
+.sales_discount_area {
+  padding: 5px;
+  color: aliceblue;
+  font-family: 'Poppins';
+  border-radius: 2px;
+}
+.sales_wrapper{
+  display: flex;
+  justify-content: center;
+  border-bottom:1px solid #393535;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  gap:80px
+}
+.sales_img_container{
+  width: 120px;
+  height: 45px;
+}
+.sales_discount_prices {
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins';
+}
+.sales_discount_original_price {
+  color: #d8e8f5;
+  text-decoration: line-through;
+  font-size: 15px;
+  text-align: center;
+  font-weight: lighter;
+}
+.sales_discount-final-price {
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 300;
+}
+
+@media screen and (max-width:1162px){
+  .sales_wrapper{
+    gap: 150px;
+  }
+}
+
+@media screen and (max-width:1005px) {
+  .sales_wrapper{
+    gap: 100px;
+  } 
+}
+
+@media screen and (max-width:855px) {
+  .sales_wrapper{
+    gap:50px
+  }
+}
+
+@media screen and (max-width:706px) {
+  .sales_row{
+    font-size: 13px;
+    width: 14rem;
+    text-overflow: ellipsis;
+    flex-direction: column;
+    justify-content: start;
+    align-items: baseline;
+    padding: 5px 0 5px 0;
+  }
+  .sales_discount_area{
+    /* height: 40px; */
+    padding: 2px;
+    font-size: 13px;
+  }
+  .sales_discount-final-price{
+    font-size: 15px;
+  }
+  .sales_discount_original_price{
+    font-size: 12px;
+  }
+  .view-sales-btn{
+    font-size: 9px;
+    height:auto;
+    width: 50px;
+  }
+  .sales_wrapper{
+    padding: 20px;
+  }
+}
+@media screen and (max-width:540px) {
+  .sales_wrapper{
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width:474px) {
+  .sales_row{
+    width: 10rem;
+  }
+  .sales_discount_area{
+    padding: 2px;
+  }
+}
+
+@media screen and (max-width:376px) {
+  .sales_row{
+    width: 8rem;
+    padding: 2px 0 2px 0;
+  }
+}
