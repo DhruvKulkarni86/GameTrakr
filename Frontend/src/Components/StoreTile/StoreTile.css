@@ -31,6 +31,14 @@
 	font-size: 1rem;
 	font-weight: 200;
 }
+@media (max-width: 800px) {
+	.st-wrap img:hover {
+		transform: none;
+	}
+	.st-wrap {
+		flex-wrap: wrap;
+	}
+}
 @media (max-width: 505px) {
 	.st-wrap h2 {
 		font-size: 1rem;
@@ -39,8 +47,8 @@
 		font-size: 12px;
 	}
 	.stm {
-		height: 36px;
-		width: 36px;
+		height: 40px;
+		width: 40px;
 	}
 }
 @media (max-width: 355px) {
@@ -51,7 +59,7 @@
 		font-size: 12px;
 	}
 	.stm {
-		height: 30px;
-		width: 30px;
+		height: 40px;
+		width: 40px;
 	}
 }

@@ -38,7 +38,7 @@
 	color: rgb(170, 180, 190);
 }
 .lan-txt:hover {
-	transform: scale(1.1);
+	transform: scale(1.02);
 	/* background: rgba(228, 214, 214, 0.247); */
 }
 .lnk-txt {
@@ -94,7 +94,8 @@
 	border-left: 2px solid #515765;
 	border-right: 2px solid #515765;
 }
-.lst:hover .nav-drop {
+.lst:hover .nav-drop,
+.lst:focus .nav-drop {
 	margin-top: 8px;
 	display: block;
 }

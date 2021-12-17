@@ -4,7 +4,7 @@ import Tooltip from '../../Tooltip/Tooltip';
 //!Stores: 25:Epic 1:Steam 7:GoG 8:Origin 11:Humble 13:Uplay
 
 const StoreTile = ({stores, year, deals}) => {
-    console.log("DEALS", deals);
+    // console.log("DEALS", deals);
     let gameURL = `https://www.cheapshark.com/redirect?dealID=`;
     // console.log("Stores", stores);
 
@@ -31,7 +31,7 @@ const StoreTile = ({stores, year, deals}) => {
     let stm = stores.filter((ul)=>{
         return ul.store_id === 1;
     })
-    console.log("STMMMM", stm);
+    // console.log("STMMMM", stm);
     let ps = stores.filter((ul)=>{
         return ul.store_id === 3;
     })

@@ -48,6 +48,7 @@ const Reg = () => {
     }
 
     const submit = e =>{
+        setRegStatus("Loading");
         e.preventDefault();
         axios.post(`${process.env.REACT_APP_BACK_URL}/signup`, formdata).then((response)=>{
             console.log(response);
@@ -85,6 +86,7 @@ const Reg = () => {
     }
 
     const lsubmit = e =>{
+        setLoginStatus("Loading");
         e.preventDefault();
         setloginFD({
             lemail:'',
@@ -113,6 +115,7 @@ const Reg = () => {
         )
         setshow(false)
     }
+    // console.log("LLLL",loginStatus);
 
     return (
         <div className="reg-wrap">
@@ -135,8 +138,10 @@ const Reg = () => {
                                         placeholder="Password" className="reg-inp"/>
                                         {show ? <i onClick={showpassword}><AiFillEyeInvisible className="reg-ico"/></i>:<i onClick={showpassword}><AiFillEye className="reg-ico"/></i>}
                                     </div>
-                                <button className="reg-but">Sign In</button>
-                                <p>{loginStatus===200?"User Logged In":loginStatus===400?"User doesn't exist":loginStatus===401?"Invalid Credentials":""}</p>
+                                <div className="form-bottom">
+                                    <button className="reg-but">Sign In</button>
+                                    <div>{loginStatus===200?"User Logged In":loginStatus===400?"User doesn't exist":loginStatus===401?"Invalid Credentials":loginStatus==="Loading"?<div className='reg-load'></div>:""}</div>
+                                </div>
                             </form>
                         </div>
                         <div className="form-container sign-in-container">
@@ -156,8 +161,14 @@ const Reg = () => {
                                         placeholder="Password" className="reg-inp"/>
                                         {show ? <i onClick={showpassword}><AiFillEyeInvisible className="reg-ico"/></i>:<i onClick={showpassword}><AiFillEye className="reg-ico"/></i>}
                                     </div>
-                                    <button className="reg-but">Sign Up</button>
-                                    <p>{regStatus===200?"User Created":regStatus===400?"User not created":""}</p>
+                                    <div className="form-bottom">
+                                        <button className="reg-but">Sign Up</button>
+                                        <div>
+                                            {regStatus===200?"User Created!":regStatus===400?"User not created, try again":regStatus==="Loading"?<div className='reg-load'></div>:""}
+                                            </div>
+                                    </div>
+                                    {/* <button className="reg-but">Sign Up</button>
+                                    <p>{regStatus===200?"User Created":regStatus===400?"User not created, try again":""}</p> */}
                                 </form>
                         </div>
                     </div>

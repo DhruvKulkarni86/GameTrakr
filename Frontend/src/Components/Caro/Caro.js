@@ -4,7 +4,7 @@ import 'animate.css';
 import './Caro.css';
 
 const Caro = ({ss}) => {
-    console.log("IMAGES", ss);
+    // console.log("IMAGES", ss);
     const [current, setCurrent] = useState(0);
     const [dir, setDir] = useState("");
     const length = ss.length;
@@ -25,7 +25,7 @@ const Caro = ({ss}) => {
         let newUrl = `https://media.rawg.io/media/resize/640/-/screenshots/${url[5]}/${url[6]}`;
         return newUrl;
     })
-    console.log("CROPS", crops);
+    // console.log("CROPS", crops);
     //!
     return (
         <div className="cr-slider">

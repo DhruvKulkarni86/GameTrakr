@@ -92,7 +92,8 @@
 }
 .sr-genre:hover {
 	overflow: visible;
-	white-space: wrap;
+	/* white-space: wrap; */
+	flex-wrap: wrap;
 	height: auto;
 }
 .sr-lnk {
@@ -146,5 +147,23 @@
 @media (max-width: 335px) {
 	.sr-content {
 		width: 10em;
+	}
+}
+
+@media (max-width: 800px) {
+	.sr-content:hover {
+		transform: none;
+	}
+	.sr-ico:hover {
+		transform: none;
+	}
+	.sr-genre:hover {
+		transform: none;
+	}
+	.sr-button button {
+		background: linear-gradient(to right, #75b022 5%, #588a1b 95%);
+	}
+	.sr-button button:hover {
+		transform: none;
 	}
 }

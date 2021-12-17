@@ -133,8 +133,8 @@ const GenreMain = ({match}) => {
                     )}
                     {result.length!==0?
                     <div className="gen-buttons">
-                        {prev!==null?<button className='main-but' onClick={loadPrev}>Prev</button>:null}
-                        <button className='main-but' onClick={loadNext}>Load More</button>
+                        {prev!==null?<button className='main-but gen-but' onClick={loadPrev}>Prev</button>:null}
+                        <button className='main-but gen-but' onClick={loadNext}>Load More</button>
                     </div>:null}
                 </div>
             </div>

@@ -86,7 +86,7 @@ useEffect(() => {
                         </div>
                         <p className='sr-genre'>
                             {genre!==undefined?genre.map((gen, pos)=>
-                                    <Link key={pos} target="_blank" rel="noopener noreferrer" className="link sr-lnk" to={`/genre/${gen.name}/${gen.id}`}>
+                                    <Link key={pos} className="link sr-lnk" to={`/genre/${gen.name}/${gen.id}`}>
                                         {gen.name}
                                     </Link>):"Loading"}
                             {/* {genre} */}
@@ -94,7 +94,7 @@ useEffect(() => {
                 </div>
                 <div className="sr-back">
                         <div className="sr-button">
-                            <Link to={`/view/${gameid}/${slug}`} target="_blank" rel="noopener noreferrer">
+                            <Link to={`/view/${gameid}/${slug}`}>
                                 <button>View Game</button>
                             </Link>
                         </div>
@@ -103,5 +103,5 @@ useEffect(() => {
         </div>
     )
 }
-
+// target="_blank" rel="noopener noreferrer"
 export default SearchRes

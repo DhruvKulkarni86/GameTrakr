@@ -29,8 +29,8 @@ const MainRes = ({match}) => {
     let user = localStorage.getItem("Username");
     let localWL = JSON.parse(localStorage.getItem("Wishlist"));
 
-    console.log("MAIN WISH", wish);
-    console.log("UUU", user);
+    // console.log("MAIN WISH", wish);
+    // console.log("UUU", user);
 
     useEffect(()=>{
         setWish(localStorage.getItem("Wishlist") ? JSON.parse(localStorage.getItem("Wishlist")):[]);
@@ -106,13 +106,13 @@ const MainRes = ({match}) => {
     }, [gameid, slug, steamid]);
 
     let devArr = details.developers;
-    console.log("ARARA",devArr);
-    console.log("Details", details);
-    console.log("DEALS", deals);
+    // console.log("ARARA",devArr);
+    // console.log("Details", details);
+    // console.log("DEALS", deals);
 
     //!get year
     let releaseYr = new Date(details.released).getFullYear();
-    console.log("RELEASE!!!!!", releaseYr);
+    // console.log("RELEASE!!!!!", releaseYr);
 
     //!title
     useEffect(() => {
@@ -132,7 +132,7 @@ const MainRes = ({match}) => {
             } 
         }
     },[localWL, details, user])
-    console.log("SET EXISTS", exists);
+    // console.log("SET EXISTS", exists);
 
     //!addToWish
     const addToWish = () =>{
@@ -205,7 +205,7 @@ const MainRes = ({match}) => {
     //!removeWish
     // console.log("BRUH ARR", bruharr);
     let d = new Date(details.released).toLocaleString().split(',')[0]
-    console.log("DDDD", d);
+    // console.log("DDDD", d);
 
     return (
         <div className="page">
@@ -242,7 +242,7 @@ const MainRes = ({match}) => {
                                 </div>
                                 <div className="main-genre">
                                 {details.length!==0?details.genres.map((gen, pos)=>
-                                        <Link key={pos} target="_blank" rel="noopener noreferrer" className="link sr-lnk" to={`/genre/${gen.name}/${gen.id}`}>
+                                        <Link key={pos} className="link sr-lnk" to={`/genre/${gen.name}/${gen.id}`}>
                                             {gen.name}
                                         </Link>):null}
                                 </div>
@@ -250,7 +250,7 @@ const MainRes = ({match}) => {
                                     <div className="main-pub">
                                         <p className='pub-head'>Developers:</p>
                                             {devArr!==undefined?devArr.map(pub=>
-                                            <Link key={`${pub.id}`} className="link" target="_blank" rel="noopener noreferrer" to={`/dev/${pub.id}/${pub.name}`}>
+                                            <Link key={`${pub.id}`} className="link" to={`/dev/${pub.id}/${pub.name}`}>
                                                 <p className='pub-name'>{pub.name}</p>
                                             </Link>):"Loading"}
                                     </div>
@@ -286,3 +286,4 @@ const MainRes = ({match}) => {
 export default MainRes
 
 //!Stores: 25:Epic 1:Steam 7:GoG 8:Origin 11:Humble 13:Uplay
+// target="_blank" rel="noopener noreferrer"

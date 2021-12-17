@@ -4,9 +4,9 @@ import {Link} from 'react-router-dom';
 
 const Navbar = () => {
     let uname = localStorage.getItem("Username");
-    console.log("USERRRRR", uname);
-    let wish = localStorage.getItem("Wishlist");
-    console.log("WISHHHH", typeof wish);
+    // console.log("USERRRRR", uname);
+    // let wish = localStorage.getItem("Wishlist");
+    // console.log("WISHHHH", typeof wish);
 
     return (
         <div className="nv">
