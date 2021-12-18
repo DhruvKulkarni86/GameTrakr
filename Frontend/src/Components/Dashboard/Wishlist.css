@@ -321,7 +321,7 @@
 		justify-content: center;
 	}
 	.purchase_area {
-		gap: 10px;
+		gap: 9px;
 	}
 }
 @media screen and (max-width: 377px) {
@@ -350,9 +350,6 @@
 	.wishlist_content {
 		min-height: 250px;
 		width: auto;
-	}
-	.svg_icon {
-		gap: 30px;
 	}
 	.wishlist_header{
 		padding-left: 2rem;
