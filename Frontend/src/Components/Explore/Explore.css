@@ -176,6 +176,7 @@ li {
 	color: aliceblue;
 	margin-top: 1rem;
 	padding-bottom: 30px;
+		width: 260px;
 }
 .row {
 	display: flex;
@@ -185,6 +186,7 @@ li {
 	width: 260px;
 	height: auto;
 	border-radius: 5px;
+	cursor: pointer;
 }
 .explore_content {
 	text-overflow: ellipsis;

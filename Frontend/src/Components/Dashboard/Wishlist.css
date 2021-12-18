@@ -11,7 +11,10 @@
 }
 .price_container {
 	display: flex;
-	flex-direction: column-reverse;
+	flex-direction: column;
+	align-items: center;
+	flex-wrap: wrap;
+	align-content: center;
 }
 .wishlist_header h3 {
 	color: #fff;
@@ -25,6 +28,7 @@
 	max-width: 30px;
 	height: auto;
 	margin-left: 15px;
+	cursor: pointer;
 }
 .wishlist_row {
 	overflow: hidden;
@@ -146,6 +150,7 @@
 .logos {
 	width: 30px;
 	height: 30px;
+	cursor: pointer;
 }
 .xbox_img {
 	margin-left: 10px;
@@ -181,7 +186,6 @@
 	object-fit: cover;
 }
 .delete {
-	cursor: pointer;
 	display: flex;
 	justify-content: flex-end;
 }
@@ -299,6 +303,7 @@
 	.wishlist_content {
 		justify-content: center;
 		align-items: center;
+		width: 350px;
 	}
 	#wishlist_ctn {
 		display: flex;
@@ -338,14 +343,18 @@
 		margin-top: 1px;
 	}
 	.purchase_area {
-		gap: 30px;
 		align-items: center;
 		justify-content: center;
+		padding-top: 30px;
 	}
 	.wishlist_content {
-		min-height: 200px;
+		min-height: 250px;
+		width: auto;
 	}
 	.svg_icon {
 		gap: 30px;
+	}
+	.wishlist_header{
+		padding-left: 2rem;
 	}
 }

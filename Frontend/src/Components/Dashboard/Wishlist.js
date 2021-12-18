@@ -159,8 +159,8 @@ const Wishlist = ({
                     Available At:{" "}
                     {ps.length !== 0 && psprice.length > 0 ? (
                       <div>
-                        <a
-                          title="Steam"
+                        <Tooltip text="Playstation">
+                          <a
                           href={psprice[0].url}
                           target="_blank"
                           rel="noreferrer"
@@ -171,13 +171,15 @@ const Wishlist = ({
                             className="ps_img"
                           />
                         </a>
+                        </Tooltip>
                       </div>
                     ) : (
                       <>
                         {xbox.length !== 0 && xboxprice.length > 0 ? (
                           <div>
+                        <Tooltip text="Xbox">
+
                             <a
-                              title="Steam"
                               href={xboxprice[0].url}
                               target="_blank"
                               rel="noreferrer"
@@ -188,13 +190,14 @@ const Wishlist = ({
                                 className="ps_img"
                               />
                             </a>
+                            </Tooltip>
                           </div>
                         ) : (
                           <>
                             {nin.length !== 0 && ninprice.length > 0 ? (
                               <div>
+                        <Tooltip text="Nintendo">
                                 <a
-                                  title="Steam"
                                   href={ninprice[0].url}
                                   target="_blank"
                                   rel="noreferrer"
@@ -205,18 +208,21 @@ const Wishlist = ({
                                     className="ps_img"
                                   />
                                 </a>
+                                </Tooltip>
                               </div>
                             ) : null}
                           </>
                         )}
                       </>
                     )}
+                    <button onClick={rem} className="remove_btn_hidden"><BsTrash /></button>
                   </div>
                 )}
                 {epic.length !== 0 ? (
                   <div className="icon_center">
+                        <Tooltip text="Epic Games">
+
                     <a
-                      title="Epic Games"
                       href={`${dealurl}${epic[0].dealID}`}
                       target="_blank"
                       rel="noreferrer"
@@ -227,13 +233,15 @@ const Wishlist = ({
                         className="logos"
                       />
                     </a>
+                    </Tooltip>
                     <p className="prices">${epic[0].salePrice}</p>
                   </div>
                 ) : null}
                 {gog.length !== 0 ? (
                   <div className="icon_center">
+                        <Tooltip text="GOG">
+            
                     <a
-                      title="GoG"
                       href={`${dealurl}${gog[0].dealID}`}
                       target="_blank"
                       rel="noreferrer"
@@ -244,14 +252,16 @@ const Wishlist = ({
                         className="logos"
                       />
                     </a>
+                    </Tooltip>
                     <p className="prices">${gog[0].salePrice}</p>
 
                   </div>
                 ) : null}
                 {origin.length !== 0 ? (
                   <div className="icon_center">
+                        <Tooltip text="Origin">
+
                     <a
-                      title="Origin"
                       href={`${dealurl}${origin[0].dealID}`}
                       target="_blank"
                       rel="noreferrer"
@@ -262,13 +272,15 @@ const Wishlist = ({
                         className="logos"
                       />
                     </a>
+                    </Tooltip>
                     <p className="prices">${origin[0].salePrice}</p>
                   </div>
                 ) : null}
                 {humble.length !== 0 ? (
                   <div className="icon_center">
+                        <Tooltip text="Humble Bundle">
+
                     <a
-                      title="Humble Bundle"
                       href={`${dealurl}${humble[0].dealID}`}
                       target="_blank"
                       rel="noreferrer"
@@ -279,14 +291,16 @@ const Wishlist = ({
                         className="logos"
                       />
                     </a>
+                    </Tooltip>
                     <p className="prices">${humble[0].salePrice}</p>
 
                   </div>
                 ) : null}
                 {uplay.length !== 0 ? (
                   <div className="icon_center">
+                        <Tooltip text="Ubisoft Store">
+
                     <a
-                      title="Ubisoft Store"
                       href={`${dealurl}${uplay[0].dealID}`}
                       target="_blank"
                       rel="noreferrer"
@@ -297,6 +311,7 @@ const Wishlist = ({
                         className="logos"
                       />
                     </a>
+                    </Tooltip>
                     <p className="prices">${uplay[0].salePrice}</p>
 
                   </div>
