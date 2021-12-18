@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { BsTrash } from "react-icons/bs";
 import "./Wishlist.css";
-
+import Tooltip from '../../Tooltip/Tooltip';
 const Wishlist = ({
   title,
   steamRatingCount,
@@ -139,8 +139,8 @@ const Wishlist = ({
               <div className="svg_icon">
                 {steam.length !== 0 ? (
                   <div className="icon_center">
+                    <Tooltip text="Steam">
                     <a
-                      title="Steam"
                       href={`${dealurl}${steam[0].dealID}`}
                       target="_blank"
                       rel="noreferrer"
@@ -151,6 +151,7 @@ const Wishlist = ({
                         className="logos"
                       />
                     </a>
+                    </Tooltip>
                     <p className="prices">${steam[0].salePrice}</p>
                   </div>
                 ) : (

@@ -35,7 +35,7 @@ const Landing = () => {
                     </ul>
                 </nav>
                 <div className="heroTxt"><h1>GameTrakr</h1></div>
-                <div className="heroTag"><h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga provident blanditiis praesentium sed reiciendis ad placeat quasi ea, pariatur libero quo tenetur illo ullam. Quisquam, aspernatur ipsa. Vero, harum cupiditate!</h2></div>
+                <div className="heroTag"><h2>Your one-stop destination to search, shop, explore and keep track of deals on your favourite games across different stores.</h2></div>
                 {/* <div className="credit">
                     <p className='footer-txt'>Created with ☕ and 🎮 by </p>
                     <span>Dhruv Kulkarni, Pradhuman Ramawat and Dhiren Joshi</span>

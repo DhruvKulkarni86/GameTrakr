@@ -3,7 +3,7 @@
 	overflow-y: scroll;
 	height: 100vh; */
 	font-family: "Poppins", sans-serif;
-	background: url("../../assets/lpMain.jpg") no-repeat;
+	background: url("../../assets/landing.png") no-repeat;
 	background-position: center center;
 	background-attachment: fixed;
 	background-size: cover;
@@ -48,7 +48,7 @@
 }
 
 .heroTag h2 {
-	font-size: 1.4rem;
+	font-size: 2rem;
 	font-weight: 400;
 }
 

@@ -157,7 +157,7 @@ const MainRes = ({match}) => {
             method: 'PUT',
         }).then(response => 
             {
-                console.log(response);
+                // console.log(response);
             })
         .catch(err=>{console.log(err);
             if(err.response.status===403){
@@ -231,7 +231,7 @@ const MainRes = ({match}) => {
                                         <button className="main-but">Log In to add game to wishlist</button>
                                         </Link>}
                                         {exists===true&&errCode!=="403"?
-                                        <Link to="/" target="_blank" rel="noopener noreferrer">
+                                        <Link to="/wishlist" target="_blank" rel="noopener noreferrer">
                                             <button className='main-but'>
                                                 View Wishlist
                                             </button>
@@ -256,7 +256,7 @@ const MainRes = ({match}) => {
                                     </div>
                                     <div className="main-release">
                                         <p className='pub-head'>Release Date:</p>
-                                        {details!==null?details.released===null?"Comming Soon":<p className='date-name'>{d}</p>:null}
+                                        {details!==null?details.released===null?"Coming Soon":<p className='date-name'>{d}</p>:null}
                                     </div>
                                 </div>
                                 <div className="main-reddit">
