@@ -120,7 +120,7 @@ const WishlistData = () => {
           let newURL = ` https://media.rawg.io/media/crop/600/400/${gameurl[4]}/${gameurl[5]}/${gameurl[6]}`;
           console.log("mad2", game);
           return (
-            <>
+            <div key={index}>
               <div id="wishlist_ctn" key={index}>
                 <Wishlist
                   key={index}
@@ -133,7 +133,7 @@ const WishlistData = () => {
                   plat={game.parent_platforms}
                 />
               </div>
-            </>
+            </div>
           );
         })}
       </div>
