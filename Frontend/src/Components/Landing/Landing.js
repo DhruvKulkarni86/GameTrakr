@@ -1,5 +1,6 @@
 import React from 'react'
 import './Landing.css';
+import {BsGithub} from 'react-icons/bs';
 import {Link} from 'react-router-dom';
 const Landing = () => {
     let uname = localStorage.getItem("Username");
@@ -36,6 +37,11 @@ const Landing = () => {
                 </nav>
                 <div className="heroTxt"><h1>GameTrakr</h1></div>
                 <div className="heroTag"><h2>Your one-stop destination to search, shop, explore and keep track of deals on your favourite games across different stores.</h2></div>
+                <div className="git">
+                    <a href="https://github.com/DhruvKulkarni86/GameTrakr" target="_blank" rel="noopener noreferrer">
+                    <BsGithub style={{"cursor": "pointer"}}/>
+                    </a>
+                </div>
             </section>
             {/* <section>
                 <div className="credit">

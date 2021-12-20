@@ -19,7 +19,18 @@
 /* section {
 	scroll-snap-align: start;
 } */
+.git {
+	color: white;
+	align-self: flex-end;
+	padding-right: 55px;
+	font-size: 2rem;
+	transition: 0.3s;
+	/* cursor: pointer; */
+}
 
+.git:hover {
+	color: #c4043a;
+}
 .s1 {
 	display: flex;
 	flex-direction: column;
@@ -112,11 +123,11 @@ nav {
 	color: #c4043a;
 }
 
-.credit {
+/* .credit {
 	color: #fff;
 	padding: 5em;
 	margin-top: 10rem;
-}
+} */
 @media (max-width: 1000px) {
 	.s1 {
 		gap: 2rem;
@@ -134,15 +145,6 @@ nav {
 	}
 }
 @media (max-width: 700px) {
-	.s1 {
-		gap: 4rem;
-	}
-	.heroTag {
-		width: 60%;
-	}
-}
-
-@media (max-width: 450px) {
 	.container {
 		background: rgb(105, 5, 5);
 		background: linear-gradient(
@@ -152,6 +154,15 @@ nav {
 			rgb(10, 4, 51) 95%
 		);
 	}
+	.s1 {
+		gap: 4rem;
+	}
+	.heroTag {
+		width: 60%;
+	}
+}
+
+@media (max-width: 450px) {
 	.s1 {
 		/* gap: 2rem; */
 		justify-content: center;
