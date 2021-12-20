@@ -33,6 +33,10 @@ const Genres = () => {
       </div>
       <div className="genre-wrap">
         {Genres.slice(0,16).map((genre, index) => {
+          // console.log("OMG", genre.image_background);
+          let urlArr =  genre.image_background.split('/');
+          let newURL = `https://media.rawg.io/media/crop/600/400/${urlArr[4]}/${urlArr[5]}/${urlArr[6]}`;
+          // console.log("OMGNEW", newURL);
           return (
             <div className="inner-genre-wrap" key={index}>
               <div className="genre-card">
@@ -42,7 +46,7 @@ const Genres = () => {
                 >
                   <div className="genre-img">
                     <img
-                      src={genre.image_background}
+                      src={newURL}
                       alt={genre.name}
                       className="img-genre"
                     ></img>
