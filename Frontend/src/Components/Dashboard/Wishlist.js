@@ -23,7 +23,7 @@ const Wishlist = ({
   useEffect(()=> {
    setUser(localStorage.getItem("Username"))
   },[])
-
+  document.title = "Wishlist";
   useEffect(() => {
     axios
       .get(

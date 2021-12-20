@@ -11,7 +11,7 @@ const Dash = () => {
   const [Loading, isLoading] = useState(true)
   const[wishlist, setwishlist] = useState([])
   let user = localStorage.getItem("Username")
-
+  document.title = "Dashboard";
   useEffect(() => {
     setTimeout(() => {
       isLoading(false);

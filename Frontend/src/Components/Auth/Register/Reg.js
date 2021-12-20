@@ -9,7 +9,7 @@ const Reg = () => {
     const [regStatus, setRegStatus] = useState("");
     const [loginStatus, setLoginStatus] = useState("");
     const [isActive, setActive] = useState(false);
-
+    document.title = "Sign Up";
     const toggleClass = () => {
         setActive(!isActive);
         setformdata({

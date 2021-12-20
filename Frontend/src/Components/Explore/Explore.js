@@ -9,6 +9,7 @@ import LoadMan from "../LoadMan/LoadMan.js";
 
 const Explore = () => {
   const [Loading, isLoading] = useState(true)
+  document.title = "Explore";
 
   useEffect(() => {
     setTimeout(() => {

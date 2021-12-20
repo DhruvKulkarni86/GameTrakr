@@ -112,11 +112,11 @@ nav {
 	color: #c4043a;
 }
 
-/* .credit {
+.credit {
 	color: #fff;
 	padding: 5em;
 	margin-top: 10rem;
-} */
+}
 @media (max-width: 1000px) {
 	.s1 {
 		gap: 2rem;

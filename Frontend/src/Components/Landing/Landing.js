@@ -36,11 +36,13 @@ const Landing = () => {
                 </nav>
                 <div className="heroTxt"><h1>GameTrakr</h1></div>
                 <div className="heroTag"><h2>Your one-stop destination to search, shop, explore and keep track of deals on your favourite games across different stores.</h2></div>
-                {/* <div className="credit">
+            </section>
+            {/* <section>
+                <div className="credit">
                     <p className='footer-txt'>Created with ☕ and 🎮 by </p>
                     <span>Dhruv Kulkarni, Pradhuman Ramawat and Dhiren Joshi</span>
-                </div> */}
-            </section>
+                </div>
+            </section> */}
         </div>
     )
 }
