@@ -1,4 +1,4 @@
-  import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Genres.css";
 
@@ -24,7 +24,7 @@ const Genres = () => {
       });
   }, [POP_URL]);
 
-  console.log(Genres);
+  // console.log(Genres);
   return (
     <div className="genre-container">
       {loading}

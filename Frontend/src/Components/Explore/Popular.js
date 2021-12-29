@@ -7,10 +7,19 @@ const Popular = () => {
   const [freeGames, setFreeGames] = useState([]);
   const [Loading, isLoading] = useState(true)
 
+//!DATES
+const toDate = new Date().toISOString().split('T')[0];
+const d = new Date();
+d.setMonth(d.getMonth()-6);
+const prevDate = d.toISOString().split("T")[0];
+// console.log("PREV", prevDate);
+// console.log("TODATE", toDate);
+//!
+
   let POP_URL = `https://api.rawg.io/api/games`;
   useEffect(() => {
     axios({
-      url: `${POP_URL}?dates=2019-01-01,2021-12-10&ordering=rating,added&key=${process.env.REACT_APP_RAWG_KEY}&stores=1,5,6,11&page_size=100`,
+      url: `${POP_URL}?dates=${prevDate},${toDate}&ordering=rating,added&key=${process.env.REACT_APP_RAWG_KEY}&stores=1,5,6,11&page_size=100`,
       headers: {
         "X-Requested-With": "XMLHttpRequest",
       },
@@ -23,19 +32,19 @@ const Popular = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, [POP_URL]);
+  }, [POP_URL, prevDate, toDate]);
 
   const scroll = (scrollOffset) => {
     let elem = document.getElementById("slide-pop");
     elem.scrollLeft += scrollOffset;
-    console.log(scrollOffset);
-    console.log(elem);
+    // console.log(scrollOffset);
+    // console.log(elem);
   };
   return (
     <div className="transform">
       {Loading}
       <div className="explore_container">
-        <h3 className="pop_span">Popular Games</h3>
+        <h3 className="pop_span">Trending Games</h3>
         <div className="slide-btn">
         <button onClick={() => scroll(-1400)} className="prev-btn">
           {

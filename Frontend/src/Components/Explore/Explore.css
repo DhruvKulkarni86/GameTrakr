@@ -1,6 +1,9 @@
 li {
 	list-style: none;
 }
+.transform {
+	padding-top: 50px;
+}
 .explore_inner_container {
 	display: flex;
 	flex-direction: row;
@@ -65,7 +68,7 @@ li {
 	flex-grow: 1;
 	flex-direction: row;
 	width: 100%;
-	padding-top: 50px;
+	/* padding-top: 50px; */
 	align-items: center;
 	align-content: space-between;
 }
@@ -176,7 +179,7 @@ li {
 	color: aliceblue;
 	margin-top: 1rem;
 	padding-bottom: 30px;
-		width: 260px;
+	width: 260px;
 }
 .row {
 	display: flex;

@@ -5,12 +5,19 @@ import "./Explore.css";
 import "animate.css";
 const NewReleases = () => {
   const [actiongames, setActionGames] = useState([]);
-  const [loading, isLoading] = useState(true)
-
+  const [loading, isLoading] = useState(true);
+  //!DATES
+  const toDate = new Date().toISOString().split('T')[0];
+  const d = new Date();
+  d.setMonth(d.getMonth()+5);
+  const prevDate = d.toISOString().split("T")[0];
+  // console.log("PREV", prevDate);
+  // console.log("TODATE", toDate);
+  //!
   let POP_URL = `https://api.rawg.io/api/games`;
   useEffect(() => {
     axios({
-      url: `${POP_URL}?key=${process.env.REACT_APP_RAWG_KEY}&dates=2021-01-01,2022-10-10&ordering=-added`,
+      url: `${POP_URL}?key=${process.env.REACT_APP_RAWG_KEY}&dates=${toDate},${prevDate}&ordering=-added`,
       headers: {
         "X-Requested-With": "XMLHttpRequest",
       },
@@ -23,20 +30,20 @@ const NewReleases = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, [POP_URL]);
+  }, [POP_URL, toDate, prevDate]);
 
   const scroll = (scrollOffset) => { 
     let elem = document.getElementById("slide-new-rel");
     elem.scrollLeft += scrollOffset;
-    console.log(scrollOffset);
-    console.log(elem);
+    // console.log(scrollOffset);
+    // console.log(elem);
   };
 
   return (
     <div className="anim">
       {loading}
       <div className="explore_container">
-        <h3 className="own_span">New and Trending Games</h3>
+        <h3 className="own_span">Upcoming Games</h3>
         <div className="slide-btn">
         <button onClick={() => scroll(-1400)} className="prev-btn">
           {

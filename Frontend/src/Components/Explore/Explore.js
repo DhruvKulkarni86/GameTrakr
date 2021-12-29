@@ -21,9 +21,9 @@ const Explore = () => {
       {Loading && <LoadMan />}
       <div className="animate">
       <Navbar />
-      <NewReleases />
-      <div className="owned_cards"></div>
       <Popular />
+      <div className="owned_cards"></div>
+      <NewReleases />
       <div className="stores"><Stores /></div>
       <Genres />
       </div>
