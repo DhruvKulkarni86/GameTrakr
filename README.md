@@ -17,7 +17,7 @@ A webapp to search, shop, explore and keep track of deals on your favourite game
 ## Authors
 
 - [DhruvKulkarni86](https://github.com/DhruvKulkarni86)
-- [N3m35is](https://github.com/N3m35is)
+- [pradhuman-ramawat](https://github.com/pradhuman-ramawat)
 - [jdhiren27](https://github.com/jdhiren27)
 ## Built using
 
