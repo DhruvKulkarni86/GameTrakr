@@ -1,5 +1,6 @@
 
 ![version](https://img.shields.io/badge/version-1.0-blue)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a28def4c-7d11-4666-89da-15d2716c2bce/deploy-status)](https://app.netlify.com/sites/gametrakr/deploys)
 
 # GameTrakr
 
